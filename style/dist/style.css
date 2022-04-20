@@ -24,7 +24,7 @@ body {
   clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
-.wrapper .logo .container {
+.wrapper .logo .navigation {
   height: 100%;
   width: 100%;
   display: flex;
@@ -34,13 +34,13 @@ body {
   background-color: black;
 }
 
-.wrapper .logo .container li {
+.wrapper .logo .navigation li {
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-.wrapper .logo .container li a {
+.wrapper .logo .navigation li a {
   color: white;
   text-decoration: none;
   margin-bottom: 40px;
@@ -50,36 +50,36 @@ body {
   transition: 0.3s;
 }
 
-.wrapper .logo .container li a:hover {
+.wrapper .logo .navigation li a:hover {
   transform: scale(1.2);
   color: #f1d3e4;
 }
 
-.wrapper .logo .container .blue {
+.wrapper .logo .navigation .blue {
   background-image: url("../photo/spa1.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .gray {
+.wrapper .logo .navigation .gray {
   background-image: url(../photo/business.png);
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .yellow {
+.wrapper .logo .navigation .yellow {
   background-image: url(../photo/hotel.png);
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .pink {
+.wrapper .logo .navigation .pink {
   background-image: url(../photo/lounge.png);
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .green {
+.wrapper .logo .navigation .green {
   background-image: url(../photo/res.png);
   background-size: 100% 100%;
   width: 25%;
