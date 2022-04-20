@@ -51,7 +51,7 @@ body {
 }
 
 .wrapper .logo .navigation li a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: #f1d3e4;
 }
 
