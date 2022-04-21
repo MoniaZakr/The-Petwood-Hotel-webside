@@ -3,21 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-$mainColor:rgb(73, 69, 69);
-$sideColor:lighten($mainColor, 30%);
+$mainColor:rgb(63, 60, 60);
+$sideColor:darken($mainColor, 5%);
+$shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+
+@mixin backgroundPhotos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor ;
-    overflow: hidden;
-    min-height: 100vh;
 }
 .wrapper {
-    filter: drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
-
+    filter: $shadow;
+    
     & .logo {
-        // height: 100%;
-        // width: 100%;
+        position: relative;
+        // z-index: 4;
         height: 60vh;
         width: 80vw;
         margin: 0 auto;
@@ -77,21 +86,76 @@ body {
                 width: 25%;
             }
         }
+ 
+            
+        .pictures{
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+            .contact{
+               @include backgroundPhotos;
+            }
+            .rooms{
+                @include backgroundPhotos;
+                display: none
+            }
+            .restaurant{
+                @include backgroundPhotos;
+                display: none
+            }
+            .weedings{
+                @include backgroundPhotos;
+                display: none
+            }
+            .relax{
+                @include backgroundPhotos;
+                display: none;
+            }
+        }
     } 
 }
+figure {
+    margin: 40px;
+    text-align: center;
+}
 .mainText {
-    width: 90vh;
-    margin: 100px 50px;
-    // padding: 30px;
+    width: 80vw;
+    margin: 80px auto;
     display: flex;
-    align-content: space-between;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     color: wheat;
+    i{
+        display: block;
+        color: rgb(150, 101, 27);
+        width: 100%;
+    }
     .text1 {
-        width: 50%;
+        width: 40%;
+        text-align: justify;
+    }
+    .text2 {
+        @extend .text1;
+    }
+    .booking{
+        height: 50px;
+        width: 100px;
+        display: block;
+        margin: 20px auto;
+        padding: 5px;
+        border: 1px solid rgb(37, 36, 36);
+        outline: none;
+        background-color:rgb(184, 184, 186) ;
+        color: rgb(151, 102, 28);
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        // box-shadow: 0px 0px 4px 3px rgba(252, 252, 252, 0.5);
+    
     }
 }
 .footer {
     height: 20vh;
     background-color:$sideColor;
+    filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+    
 }
