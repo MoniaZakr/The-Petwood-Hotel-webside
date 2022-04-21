@@ -9,6 +9,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #494545;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -17,8 +18,6 @@ body {
 }
 
 .wrapper .logo {
-  height: 100%;
-  width: 100%;
   height: 60vh;
   width: 80vw;
   margin: 0 auto;
@@ -101,5 +100,28 @@ body {
   background-image: url(../photo/res.png);
   background-size: 100% 100%;
   width: 25%;
+}
+
+.mainText {
+  width: 90vh;
+  margin: 100px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: wheat;
+}
+
+.mainText .text1 {
+  width: 50%;
+}
+
+.footer {
+  height: 20vh;
+  background-color: #979090;
 }
 /*# sourceMappingURL=style.css.map */
