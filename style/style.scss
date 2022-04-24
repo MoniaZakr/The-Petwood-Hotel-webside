@@ -15,8 +15,6 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     width: 100%;
     display: none;
 }
-
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor ;
@@ -26,7 +24,6 @@ body {
     
     & .logo {
         position: relative;
-        // z-index: 4;
         height: 60vh;
         width: 80vw;
         margin: 0 auto;
@@ -86,18 +83,15 @@ body {
                 width: 25%;
             }
         }
- 
-            
         .pictures{
             height: 100%;
             width: 100%;
-            background-color: aqua;
             .contact{
                @include backgroundPhotos;
             }
             .rooms{
                 @include backgroundPhotos;
-                display: none
+                display: none;
             }
             .restaurant{
                 @include backgroundPhotos;
@@ -133,6 +127,7 @@ figure {
     .text1 {
         width: 40%;
         text-align: justify;
+        line-height: 1.5rem
     }
     .text2 {
         @extend .text1;
@@ -143,14 +138,16 @@ figure {
         display: block;
         margin: 20px auto;
         padding: 5px;
-        border: 1px solid rgb(37, 36, 36);
+        border: 1px solid rgb(151, 102, 28);
         outline: none;
         background-color:rgb(184, 184, 186) ;
         color: rgb(151, 102, 28);
         font-size: 1.1rem;
         letter-spacing: 1px;
-        // box-shadow: 0px 0px 4px 3px rgba(252, 252, 252, 0.5);
-    
+        box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 .footer {
