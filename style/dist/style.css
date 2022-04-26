@@ -83,6 +83,11 @@ body {
   width: 25%;
 }
 
+.wrapper .logo .navigation .disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .wrapper .logo .pictures {
   height: 100%;
   width: 100%;

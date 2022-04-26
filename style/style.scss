@@ -82,6 +82,10 @@ body {
                 background-size: 100% 100%;
                 width: 25%;
             }
+            & .disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
         .pictures{
             height: 100%;
