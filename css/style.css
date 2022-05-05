@@ -52,6 +52,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .wrapper .logo .navigation li a {
@@ -106,6 +109,11 @@ body {
   visibility: hidden;
 }
 
+.wrapper .logo .navigation .clikedElement {
+  opacity: 0.8;
+  z-index: 5;
+}
+
 .wrapper .logo .pictures {
   height: 100%;
   width: 100%;
@@ -117,7 +125,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
+  z-index: -7;
 }
 
 .wrapper .logo .pictures .rooms {
@@ -126,8 +134,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
-  display: none;
+  z-index: -7;
 }
 
 .wrapper .logo .pictures .restaurant {
@@ -136,8 +143,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
-  display: none;
+  z-index: -7;
 }
 
 .wrapper .logo .pictures .weedings {
@@ -146,8 +152,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
-  display: none;
+  z-index: -7;
 }
 
 .wrapper .logo .pictures .relax {
@@ -156,8 +161,12 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
-  display: none;
+  z-index: -7;
+}
+
+.wrapper .logo .pictures .active {
+  visibility: visible;
+  z-index: 3;
 }
 
 figure {

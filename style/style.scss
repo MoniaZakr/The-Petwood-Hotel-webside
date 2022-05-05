@@ -13,7 +13,8 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     left: 0;
     height: 100%;
     width: 100%;
-    display: none;
+    z-index: -7;
+    // visibility: hidden;
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -40,9 +41,13 @@ body {
             background-color: black;
             
             & li {
+               
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
+                z-index: 4;
+                transition: 0.3s;
+                
                 & a {
                     color: white;
                     text-decoration: none;
@@ -86,28 +91,33 @@ body {
                 opacity: 0;
                 visibility: hidden;
             }
+            & .clikedElement{
+                opacity: 0.8;
+                z-index: 5;
+            }
         }
         .pictures{
             height: 100%;
             width: 100%;
             .contact{
                @include backgroundPhotos;
+            //    z-index: 3;
             }
             .rooms{
                 @include backgroundPhotos;
-                display: none;
             }
             .restaurant{
                 @include backgroundPhotos;
-                display: none
             }
             .weedings{
                 @include backgroundPhotos;
-                display: none
             }
             .relax{
                 @include backgroundPhotos;
-                display: none;
+            }
+            .active{
+                visibility: visible;
+                z-index: 3;
             }
         }
     } 
