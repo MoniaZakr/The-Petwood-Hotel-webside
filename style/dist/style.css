@@ -41,7 +41,7 @@ body {
 }
 
 .wrapper .logo .navigation li a {
-  color: white;
+  color: #faf9f6;
   text-decoration: none;
   margin-bottom: 40px;
   font-size: 1,6rem;
@@ -161,7 +161,7 @@ figure {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: wheat;
+  color: #faf9f6;
 }
 
 .mainText i {
@@ -180,7 +180,7 @@ figure {
   height: 50px;
   width: 100px;
   display: block;
-  margin: 20px auto;
+  margin: 35px auto;
   padding: 5px;
   border: 1px solid #97661c;
   outline: none;
@@ -196,9 +196,25 @@ figure {
 }
 
 .footer {
-  height: 20vh;
   background-color: #323030;
   filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+}
+
+.footer .socialMedia {
+  text-align: center;
+}
+
+.footer .socialMedia .icons {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 30px;
+  color: #faf9f6;
+}
+
+.footer .footerMessage {
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
