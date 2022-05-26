@@ -20,9 +20,26 @@ body {
   height: 60vh;
   width: 80vw;
   margin: 0 auto;
-  background-color: brown;
   -webkit-clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
           clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+@media (max-width: 1040px) {
+  .wrapper .logo {
+    height: 42vh;
+    width: 100vw;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  @media (max-width: 460px) {
+    .wrapper .logo {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      height: 100vw;
+      -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+              clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+  }
 }
 
 .wrapper .logo .navigation {
@@ -57,6 +74,14 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo .navigation li {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .wrapper .logo .navigation li a {
   color: #faf9f6;
   text-decoration: none;
@@ -68,10 +93,24 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo .navigation li a {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    letter-spacing: 2px;
+  }
+}
+
 .wrapper .logo .navigation li a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  font-size: 1.2rem;
   color: #f1d3e4;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .navigation li a:hover {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
 }
 
 .wrapper .logo .navigation .blue {
@@ -128,6 +167,20 @@ body {
   z-index: -7;
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .contact {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .contact {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
 .wrapper .logo .pictures .rooms {
   position: absolute;
   top: 0;
@@ -135,6 +188,20 @@ body {
   height: 100%;
   width: 100%;
   z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .rooms {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .rooms {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
 }
 
 .wrapper .logo .pictures .restaurant {
@@ -146,6 +213,20 @@ body {
   z-index: -7;
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .restaurant {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .restaurant {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
 .wrapper .logo .pictures .weedings {
   position: absolute;
   top: 0;
@@ -153,6 +234,13 @@ body {
   height: 100%;
   width: 100%;
   z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .weedings {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
 }
 
 .wrapper .logo .pictures .relax {
@@ -164,6 +252,20 @@ body {
   z-index: -7;
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .relax {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .relax {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
 .wrapper .logo .pictures .active {
   visibility: visible;
   z-index: 3;
@@ -172,6 +274,12 @@ body {
 figure {
   margin: 40px;
   text-align: center;
+}
+
+@media (max-width: 1040px) {
+  figure {
+    margin: 30px;
+  }
 }
 
 .mainText {
@@ -188,6 +296,18 @@ figure {
   color: #faf9f6;
 }
 
+@media (max-width: 1040px) {
+  .mainText {
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainText {
+    display: block;
+  }
+}
+
 .mainText i {
   display: block;
   color: #96651b;
@@ -198,6 +318,18 @@ figure {
   width: 40%;
   text-align: justify;
   line-height: 1.5rem;
+}
+
+@media (max-width: 460px) {
+  .mainText .text1, .mainText .text2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainText .text2 {
+    width: 100%;
+  }
 }
 
 .mainText .booking {
@@ -222,9 +354,17 @@ figure {
 }
 
 .footer {
+  height: 20vh;
   background-color: #323030;
   -webkit-filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
           filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+}
+
+@media (max-width: 1040px) {
+  .footer {
+    height: 15vh;
+    overflow: hidden;
+  }
 }
 
 .footer .socialMedia {
@@ -236,6 +376,17 @@ figure {
   padding: 20px 30px;
   font-size: 30px;
   color: #faf9f6;
+}
+
+@media (max-width: 460px) {
+  .footer .socialMedia .icons {
+    padding: 20px 45px;
+  }
+}
+
+.footer .socialMedia .icons:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footer .footerMessage {
