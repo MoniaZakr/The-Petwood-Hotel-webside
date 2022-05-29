@@ -16,13 +16,15 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     width: 100%;
     z-index: -7;
     @include mg(small) {
-            transform: rotate(-90deg)
+        transform: rotate(-90deg)
     }
 }
 $breakpoints:(
     large:(max-width:1040px),
     medium:(max-width:800px),
+    x-small:(max-width:580px),
     small :(max-width:460px),
+    extra-small :(max-width:375px),
 );
 @mixin mg($breakpoint) {
     $size:map-get($map: $breakpoints, $key:$breakpoint);
@@ -33,16 +35,18 @@ $breakpoints:(
     }
 }
 body {
+    height: 100vh;
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
-    // @include mg(medium) {
-    //     height: 100vh;
-    //     max-height: 100vh;
-    // }
+    overflow-x: hidden;
+    @include mg(medium) {
+        height: 100vh;
+        max-height: 100vh;
+    }
 }
 .wrapper {
     filter: $shadow;
-    
     & .logo {
         position: relative;
         height: 60vh;
@@ -50,16 +54,26 @@ body {
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
         @include mg(large) {
-        height: 42vh;
-        width: 100vw;
-        clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
-        @include mg(small) {
-            transform: rotate(90deg);
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(medium) {
+            height: 40vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(x-small) {
             height: 100vw;
+            transform: rotate(90deg);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            overflow: hidden;
+        }
+        @include mg(small) {
+            height: 100vw;
+            transform: rotate(90deg);
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
         }
-    }
-        
         & .navigation {
             height: 100%;
             width: 100%;
@@ -67,23 +81,18 @@ body {
             flex-direction: row;
             justify-content: space-evenly;
             list-style: none;
-            background-color: black;
-            // @include mg(small) {
-            //     flex-direction: column;
-
-            // }
-            
+            @include mg(x-small) {
+                overflow: hidden;
+            }
             & li {
-               
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
                 z-index: 4;
                 transition: 0.3s;
                 @include mg(small) {
-                    align-items: center;
+                    margin: 0;
                 }
-                
                 & a {
                     color: $textColor;
                     text-decoration: none;
@@ -92,9 +101,10 @@ body {
                     font-weight: bold;
                     letter-spacing: 1px;
                     transition: 0.3s;
-                    @include mg(small) {
+                    @include mg(x-small) {
                         transform: rotate(-90deg);
                         letter-spacing: 2px;
+                        align-self: center;
                     }
                     &:hover {
                         font-size: 1.2rem;
@@ -110,28 +120,24 @@ body {
             background-image: url("../photo/spa1.png");
             background-size: 100% 100%;
             width: 25%;
-            // @include mg(small) {
-            //     width: 100%;
-            //     // transform: rotate(90deg);
-            // }
             }
             & .gray {
-            background-image: url(../photo/business.png);
+            background-image: url("../photo/business.png");
             background-size: 100% 100%;
             width: 25%;
             }
             & .yellow {
-                background-image: url(../photo/hotel.png);
+                background-image: url("../photo/hotel.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
             & .pink {
-                background-image: url(../photo/lounge.png);
+                background-image: url("../photo/lounge.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
             & .green {
-                background-image: url(../photo/res.png);
+                background-image: url("../photo/res.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
@@ -149,28 +155,31 @@ body {
             width: 100%;
             .contact{
                @include backgroundPhotos;
-               @include mg(small) {
+               @include mg(x-small) {
                    transform: rotate(-90deg)
                 }
             }
             .rooms{
                 @include backgroundPhotos;
-                @include mg(small) {
+                @include mg(x-small) {
                     transform: rotate(-90deg)
                 };
             }
             .restaurant{
                 @include backgroundPhotos;
-                @include mg(small) {
+                @include mg(x-small) {
                     transform: rotate(-90deg)
                 };
             }
             .weedings{
                 @include backgroundPhotos;
+                @include mg(x-small) {
+                    transform: rotate(-90deg)
+                };
             }
             .relax{
                 @include backgroundPhotos;
-                @include mg(small) {
+                @include mg(x-small) {
                     transform: rotate(-90deg)
                 };
             }
@@ -179,7 +188,7 @@ body {
                 z-index: 3;
             }
         }
-    } 
+    }
 }
 figure {
     margin: 40px;
@@ -242,15 +251,18 @@ figure {
 }
 .footer {
     height: 20vh;
+    width: 100%;
+    overflow: hidden;
     background-color:$sideColor;
+    filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
     @include mg(large) {
-        height:15vh;
+        height: 15vh;
         overflow: hidden;
     }
-    // @include mg(medium) {
-    //     height:20vh;
-    // }
-    filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+    @include mg(medium) {
+        height: 15vh;
+        overflow-x: hidden;
+    }
     & .socialMedia {
         text-align: center;
         & .icons {
@@ -268,8 +280,25 @@ figure {
     }
     & .footerMessage {
         font-size: 0.8rem;
-        padding: 8px 15px;
+        margin-bottom: 4px;
         text-align: center;
+        @include mg(large) {
+            // font-size: 0.7rem;
+            margin: 4px 5px;
+        }
+        @include mg(medium) {
+            font-size: 0.7rem;
+            margin-bottom: 2px;
+        }
+        @include mg(small) {
+            font-size: 0.6rem;
+            text-align: start;
+        }
+        @include mg(extra-small) {
+            font-size: 0.4rem;
+            text-align: start;
+            margin: 0 3px 2px 3px;
+        }
     }
     
 }

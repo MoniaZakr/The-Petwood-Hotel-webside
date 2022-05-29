@@ -6,8 +6,18 @@
 }
 
 body {
+  height: 100vh;
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
+  overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .wrapper {
@@ -27,18 +37,39 @@ body {
 @media (max-width: 1040px) {
   .wrapper .logo {
     height: 42vh;
-    width: 100vw;
+    width: 100%;
     -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
             clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
   }
-  @media (max-width: 460px) {
-    .wrapper .logo {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      height: 100vw;
-      -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
-              clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
-    }
+}
+
+@media (max-width: 800px) {
+  .wrapper .logo {
+    height: 40vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
   }
 }
 
@@ -56,7 +87,12 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style: none;
-  background-color: black;
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .navigation {
+    overflow: hidden;
+  }
 }
 
 .wrapper .logo .navigation li {
@@ -76,9 +112,7 @@ body {
 
 @media (max-width: 460px) {
   .wrapper .logo .navigation li {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin: 0;
   }
 }
 
@@ -93,11 +127,14 @@ body {
   transition: 0.3s;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .navigation li a {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     letter-spacing: 2px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
@@ -120,25 +157,25 @@ body {
 }
 
 .wrapper .logo .navigation .gray {
-  background-image: url(../photo/business.png);
+  background-image: url("../photo/business.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
 .wrapper .logo .navigation .yellow {
-  background-image: url(../photo/hotel.png);
+  background-image: url("../photo/hotel.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
 .wrapper .logo .navigation .pink {
-  background-image: url(../photo/lounge.png);
+  background-image: url("../photo/lounge.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
 .wrapper .logo .navigation .green {
-  background-image: url(../photo/res.png);
+  background-image: url("../photo/res.png");
   background-size: 100% 100%;
   width: 25%;
 }
@@ -174,7 +211,7 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .pictures .contact {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -197,7 +234,7 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .pictures .rooms {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -220,7 +257,7 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .pictures .restaurant {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -243,6 +280,13 @@ body {
   }
 }
 
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .weedings {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
 .wrapper .logo .pictures .relax {
   position: absolute;
   top: 0;
@@ -259,7 +303,7 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .pictures .relax {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -355,6 +399,8 @@ figure {
 
 .footer {
   height: 20vh;
+  width: 100%;
+  overflow: hidden;
   background-color: #323030;
   -webkit-filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
           filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
@@ -364,6 +410,13 @@ figure {
   .footer {
     height: 15vh;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    height: 15vh;
+    overflow-x: hidden;
   }
 }
 
@@ -391,7 +444,35 @@ figure {
 
 .footer .footerMessage {
   font-size: 0.8rem;
-  padding: 8px 15px;
+  margin-bottom: 4px;
   text-align: center;
+}
+
+@media (max-width: 1040px) {
+  .footer .footerMessage {
+    margin: 4px 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer .footerMessage {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer .footerMessage {
+    font-size: 0.6rem;
+    text-align: start;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer .footerMessage {
+    font-size: 0.4rem;
+    text-align: start;
+    margin: 0 3px 2px 3px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
