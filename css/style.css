@@ -6,9 +6,18 @@
 }
 
 body {
+  height: 100vh;
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #494545;
-  overflow: hidden;
+  background-color: #3f3c3c;
+  overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .wrapper {
@@ -17,17 +26,54 @@ body {
 }
 
 .wrapper .logo {
-  height: 100%;
-  width: 100%;
+  position: relative;
   height: 60vh;
   width: 80vw;
   margin: 0 auto;
-  background-color: brown;
   -webkit-clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
           clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
-.wrapper .logo .container {
+@media (max-width: 1040px) {
+  .wrapper .logo {
+    height: 42vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper .logo {
+    height: 40vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+.wrapper .logo .navigation {
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -41,10 +87,15 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style: none;
-  background-color: black;
 }
 
-.wrapper .logo .container li {
+@media (max-width: 580px) {
+  .wrapper .logo .navigation {
+    overflow: hidden;
+  }
+}
+
+.wrapper .logo .navigation li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,10 +105,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.wrapper .logo .container li a {
-  color: white;
+@media (max-width: 460px) {
+  .wrapper .logo .navigation li {
+    margin: 0;
+  }
+}
+
+.wrapper .logo .navigation li a {
+  color: #faf9f6;
   text-decoration: none;
   margin-bottom: 40px;
   font-size: 1,6rem;
@@ -67,39 +127,352 @@ body {
   transition: 0.3s;
 }
 
-.wrapper .logo .container li a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+@media (max-width: 580px) {
+  .wrapper .logo .navigation li a {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    letter-spacing: 2px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.wrapper .logo .navigation li a:hover {
+  font-size: 1.2rem;
   color: #f1d3e4;
 }
 
-.wrapper .logo .container .blue {
+@media (max-width: 460px) {
+  .wrapper .logo .navigation li a:hover {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .navigation .blue {
   background-image: url("../photo/spa1.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .gray {
-  background-image: url(../photo/business.png);
+.wrapper .logo .navigation .gray {
+  background-image: url("../photo/business.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .yellow {
-  background-image: url(../photo/hotel.png);
+.wrapper .logo .navigation .yellow {
+  background-image: url("../photo/hotel.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .pink {
-  background-image: url(../photo/lounge.png);
+.wrapper .logo .navigation .pink {
+  background-image: url("../photo/lounge.png");
   background-size: 100% 100%;
   width: 25%;
 }
 
-.wrapper .logo .container .green {
-  background-image: url(../photo/res.png);
+.wrapper .logo .navigation .green {
+  background-image: url("../photo/res.png");
   background-size: 100% 100%;
   width: 25%;
+}
+
+.wrapper .logo .navigation .disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper .logo .navigation .clikedElement {
+  opacity: 0.8;
+  z-index: 5;
+}
+
+.wrapper .logo .pictures {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .logo .pictures .contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .contact {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .contact {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .pictures .rooms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .rooms {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .rooms {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .pictures .restaurant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .restaurant {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .restaurant {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .pictures .weedings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .weedings {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .weedings {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .pictures .relax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -7;
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo .pictures .relax {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper .logo .pictures .relax {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+.wrapper .logo .pictures .active {
+  visibility: visible;
+  z-index: 3;
+}
+
+figure {
+  margin: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1040px) {
+  figure {
+    margin: 30px;
+  }
+}
+
+.mainText {
+  width: 80vw;
+  margin: 80px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #faf9f6;
+}
+
+@media (max-width: 1040px) {
+  .mainText {
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainText {
+    display: block;
+  }
+}
+
+.mainText i {
+  display: block;
+  color: #96651b;
+  width: 100%;
+}
+
+.mainText .text1, .mainText .text2 {
+  width: 40%;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 460px) {
+  .mainText .text1, .mainText .text2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainText .text2 {
+    width: 100%;
+  }
+}
+
+.mainText .booking {
+  height: 50px;
+  width: 100px;
+  display: block;
+  margin: 35px auto;
+  padding: 5px;
+  border: 1px solid #97661c;
+  outline: none;
+  background-color: #b8b8ba;
+  color: #97661c;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+          box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+}
+
+.mainText .booking:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #323030;
+  -webkit-filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+          filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+}
+
+@media (max-width: 1040px) {
+  .footer {
+    height: 15vh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    height: 15vh;
+    overflow-x: hidden;
+  }
+}
+
+.footer .socialMedia {
+  text-align: center;
+}
+
+.footer .socialMedia .icons {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 30px;
+  color: #faf9f6;
+}
+
+@media (max-width: 460px) {
+  .footer .socialMedia .icons {
+    padding: 20px 45px;
+  }
+}
+
+.footer .socialMedia .icons:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer .footerMessage {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+@media (max-width: 1040px) {
+  .footer .footerMessage {
+    margin: 4px 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer .footerMessage {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer .footerMessage {
+    font-size: 0.6rem;
+    text-align: start;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer .footerMessage {
+    font-size: 0.4rem;
+    text-align: start;
+    margin: 0 3px 2px 3px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

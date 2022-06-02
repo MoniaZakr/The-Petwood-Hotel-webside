@@ -3,48 +3,117 @@
     padding: 0;
     box-sizing: border-box;
 }
+$mainColor:rgb(63, 60, 60);
+$sideColor:darken($mainColor, 5%);
+$textColor:rgb(250, 249, 246);
+$shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+
+@mixin backgroundPhotos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -7;
+    @include mg(small) {
+        transform: rotate(-90deg)
+    }
+}
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:800px),
+    x-small:(max-width:580px),
+    small :(max-width:460px),
+    extra-small :(max-width:375px),
+);
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
 body {
+    height: 100vh;
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(73, 69, 69);
-    overflow: hidden;
+    background-color:$mainColor;
+    overflow-x: hidden;
+    @include mg(medium) {
+        height: 100vh;
+        max-height: 100vh;
+    }
 }
 .wrapper {
-    filter: drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
-
+    filter: $shadow;
     & .logo {
-        height: 100%;
-        width: 100%;
+        position: relative;
         height: 60vh;
         width: 80vw;
         margin: 0 auto;
-        background-color: brown;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
-        
-        & .container {
+        @include mg(large) {
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(medium) {
+            height: 40vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(x-small) {
+            height: 100vw;
+            transform: rotate(90deg);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            overflow: hidden;
+        }
+        @include mg(small) {
+            height: 100vw;
+            transform: rotate(90deg);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        & .navigation {
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             list-style: none;
-            background-color: black;
-            
+            @include mg(x-small) {
+                overflow: hidden;
+            }
             & li {
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
+                z-index: 4;
+                transition: 0.3s;
+                @include mg(small) {
+                    margin: 0;
+                }
                 & a {
-                    color: white;
+                    color: $textColor;
                     text-decoration: none;
                     margin-bottom: 40px;
                     font-size: 1,6rem;
                     font-weight: bold;
                     letter-spacing: 1px;
                     transition: 0.3s;
-                    &:hover {
-                        transform: scale(1.2);
-                        color: rgb(241, 211, 228);
+                    @include mg(x-small) {
+                        transform: rotate(-90deg);
+                        letter-spacing: 2px;
+                        align-self: center;
                     }
+                    &:hover {
+                        font-size: 1.2rem;
+                        color: rgb(241, 211, 228);
+                        @include mg(small) {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    
                 }
             }
             & .blue {
@@ -53,25 +122,183 @@ body {
             width: 25%;
             }
             & .gray {
-            background-image: url(../photo/business.png);
+            background-image: url("../photo/business.png");
             background-size: 100% 100%;
             width: 25%;
             }
             & .yellow {
-                background-image: url(../photo/hotel.png);
+                background-image: url("../photo/hotel.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
             & .pink {
-                background-image: url(../photo/lounge.png);
+                background-image: url("../photo/lounge.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
             & .green {
-                background-image: url(../photo/res.png);
+                background-image: url("../photo/res.png");
                 background-size: 100% 100%;
                 width: 25%;
             }
+            & .disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+            & .clikedElement{
+                opacity: 0.8;
+                z-index: 5;
+            }
         }
-    } 
+        .pictures{
+            height: 100%;
+            width: 100%;
+            .contact{
+               @include backgroundPhotos;
+               @include mg(x-small) {
+                   transform: rotate(-90deg)
+                }
+            }
+            .rooms{
+                @include backgroundPhotos;
+                @include mg(x-small) {
+                    transform: rotate(-90deg)
+                };
+            }
+            .restaurant{
+                @include backgroundPhotos;
+                @include mg(x-small) {
+                    transform: rotate(-90deg)
+                };
+            }
+            .weedings{
+                @include backgroundPhotos;
+                @include mg(x-small) {
+                    transform: rotate(-90deg)
+                };
+            }
+            .relax{
+                @include backgroundPhotos;
+                @include mg(x-small) {
+                    transform: rotate(-90deg)
+                };
+            }
+            .active{
+                visibility: visible;
+                z-index: 3;
+            }
+        }
+    }
+}
+figure {
+    margin: 40px;
+    text-align: center;
+    @include mg(large) {
+        margin: 30px;
+    }
+
+}
+.mainText {
+    width: 80vw;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $textColor;
+    @include mg(large) {
+        margin: 40px auto;
+    }
+    @include mg(small) {
+        display: block;
+    }
+
+    i{
+        display: block;
+        color: rgb(150, 101, 27);
+        width: 100%;
+    }
+    .text1 {
+        width: 40%;
+        text-align: justify;
+        line-height: 1.5rem;
+        @include mg(small) {
+            width: 100%;
+        }
+    }
+    .text2 {
+        @extend .text1;
+        @include mg(small) {
+            width: 100%;
+        }
+    }
+    .booking{
+        height: 50px;
+        width: 100px;
+        display: block;
+        margin: 35px auto;
+        padding: 5px;
+        border: 1px solid rgb(151, 102, 28);
+        outline: none;
+        background-color:rgb(184, 184, 186) ;
+        color: rgb(151, 102, 28);
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.footer {
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+    background-color:$sideColor;
+    filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+    @include mg(large) {
+        height: 15vh;
+        overflow: hidden;
+    }
+    @include mg(medium) {
+        height: 15vh;
+        overflow-x: hidden;
+    }
+    & .socialMedia {
+        text-align: center;
+        & .icons {
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 30px;
+            color: $textColor;
+            @include mg(small) {
+                padding: 20px 45px;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    & .footerMessage {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        text-align: center;
+        @include mg(large) {
+            // font-size: 0.7rem;
+            margin: 4px 5px;
+        }
+        @include mg(medium) {
+            font-size: 0.7rem;
+            margin-bottom: 2px;
+        }
+        @include mg(small) {
+            font-size: 0.6rem;
+            text-align: start;
+        }
+        @include mg(extra-small) {
+            font-size: 0.4rem;
+            text-align: start;
+            margin: 0 3px 2px 3px;
+        }
+    }
+    
 }
