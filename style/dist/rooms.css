@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #3f3c3c;
+}
+
+.wrapper {
+  filter: drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+}
+
+.wrapper .swiper {
+  background-color: crimson;
+  height: 60vh;
+  width: 80vw;
+  clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.wrapper .swiper .swiper-slide {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.wrapper .swiper .swiper-slide .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  margin: 40px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=rooms.css.map */

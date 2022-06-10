@@ -1,1 +1,69 @@
-/* No CSS *//*# sourceMappingURL=contact.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #3f3c3c;
+}
+
+.wrapper {
+  -webkit-filter: drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+          filter: drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+}
+
+.wrapper .logo {
+  border-color: blue;
+  position: relative;
+  height: 60vh;
+  width: 80vw;
+  margin: 0 auto;
+  -webkit-clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+          clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.wrapper .logo .pictures {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .logo .pictures .hotel1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .logo .pictures .hotel2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .logo .pictures .accomodation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .logo .pictures .weedings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+figure {
+  margin: 40px;
+  text-align: center;
+}
+/*# sourceMappingURL=contact.css.map */
