@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$mainColor:rgb(63, 60, 60);
+$sideColor:darken($mainColor, 5%);
+$textColor:rgb(250, 249, 246);
+$shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
+
+@mixin backgroundPhotos {
+   display: block;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:$mainColor;
+}
+.wrapper {
+    filter: $shadow;
+    & .logo {
+        position: relative;
+        height: 60vh;
+        width: 80vw;
+        margin: 0 auto;
+        clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        .pictures{
+            height: 100%;
+            width: 100%;
+            .img{
+               @include backgroundPhotos;
+            }
+        }
+    }
+}   
+.logoButton {
+    display: block;
+    margin: 40px auto;
+    background: none;
+    border: none;
+}
+    

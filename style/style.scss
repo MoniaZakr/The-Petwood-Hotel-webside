@@ -153,36 +153,36 @@ body {
         .pictures{
             height: 100%;
             width: 100%;
-            .contact{
+            .img{
                @include backgroundPhotos;
                @include mg(x-small) {
                    transform: rotate(-90deg)
                 }
             }
-            .rooms{
-                @include backgroundPhotos;
-                @include mg(x-small) {
-                    transform: rotate(-90deg)
-                };
-            }
-            .restaurant{
-                @include backgroundPhotos;
-                @include mg(x-small) {
-                    transform: rotate(-90deg)
-                };
-            }
-            .weedings{
-                @include backgroundPhotos;
-                @include mg(x-small) {
-                    transform: rotate(-90deg)
-                };
-            }
-            .relax{
-                @include backgroundPhotos;
-                @include mg(x-small) {
-                    transform: rotate(-90deg)
-                };
-            }
+            // .rooms{
+            //     @include backgroundPhotos;
+            //     @include mg(x-small) {
+            //         transform: rotate(-90deg)
+            //     };
+            // }
+            // .restaurant{
+            //     @include backgroundPhotos;
+            //     @include mg(x-small) {
+            //         transform: rotate(-90deg)
+            //     };
+            // }
+            // .weedings{
+            //     @include backgroundPhotos;
+            //     @include mg(x-small) {
+            //         transform: rotate(-90deg)
+            //     };
+            // }
+            // .relax{
+            //     @include backgroundPhotos;
+            //     @include mg(x-small) {
+            //         transform: rotate(-90deg)
+            //     };
+            // }
             .active{
                 visibility: visible;
                 z-index: 3;

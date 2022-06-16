@@ -195,7 +195,7 @@ body {
   width: 100%;
 }
 
-.wrapper .logo .pictures .contact {
+.wrapper .logo .pictures .img {
   position: absolute;
   top: 0;
   left: 0;
@@ -205,106 +205,14 @@ body {
 }
 
 @media (max-width: 460px) {
-  .wrapper .logo .pictures .contact {
+  .wrapper .logo .pictures .img {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }
 }
 
 @media (max-width: 580px) {
-  .wrapper .logo .pictures .contact {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-.wrapper .logo .pictures .rooms {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -7;
-}
-
-@media (max-width: 460px) {
-  .wrapper .logo .pictures .rooms {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-@media (max-width: 580px) {
-  .wrapper .logo .pictures .rooms {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-.wrapper .logo .pictures .restaurant {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -7;
-}
-
-@media (max-width: 460px) {
-  .wrapper .logo .pictures .restaurant {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-@media (max-width: 580px) {
-  .wrapper .logo .pictures .restaurant {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-.wrapper .logo .pictures .weedings {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -7;
-}
-
-@media (max-width: 460px) {
-  .wrapper .logo .pictures .weedings {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-@media (max-width: 580px) {
-  .wrapper .logo .pictures .weedings {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-.wrapper .logo .pictures .relax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -7;
-}
-
-@media (max-width: 460px) {
-  .wrapper .logo .pictures .relax {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-}
-
-@media (max-width: 580px) {
-  .wrapper .logo .pictures .relax {
+  .wrapper .logo .pictures .img {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }

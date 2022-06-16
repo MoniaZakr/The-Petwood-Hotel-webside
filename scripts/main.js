@@ -1,5 +1,5 @@
 const navigation = [...document.querySelectorAll(".navigation li")];
-const pictures = [...document.querySelectorAll(".pictures img")]
+const pictures = [...document.querySelectorAll(".pictures .img")]
 
 for (var i = 0; i < navigation.length; i++) {
     navigation[i].addEventListener( "mouseover", toggle);
