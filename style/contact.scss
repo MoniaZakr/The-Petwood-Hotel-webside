@@ -32,21 +32,20 @@ body {
         & .pictures {
             height: 100%;
             width: 100%;
-            & .hotel1{
-                @include backgroundPhotos;
-                
-            }
-            & .hotel2{
+            & img {
                 @include backgroundPhotos;
             }
+            // & .hotel2{
+            //     @include backgroundPhotos;
+            // }
 
-            & .accomodation{
-                @include backgroundPhotos;
+            // & .accomodation{
+            //     @include backgroundPhotos;
                
-            }
-            & .weedings{
-                @include backgroundPhotos;
-            }
+            // }
+            // & .weedings{
+            //     @include backgroundPhotos;
+            // }
         }
     }
 }

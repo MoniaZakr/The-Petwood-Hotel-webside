@@ -27,31 +27,7 @@ body {
   width: 100%;
 }
 
-.wrapper .logo .pictures .hotel1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper .logo .pictures .hotel2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper .logo .pictures .accomodation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper .logo .pictures .weedings {
+.wrapper .logo .pictures img {
   position: fixed;
   top: 0;
   left: 0;

@@ -1,5 +1,5 @@
 const pictures = document.querySelector(".pictures");
-const images = document.querySelectorAll(".pictures img");
+const images = document.querySelectorAll(".pictures .hotel");
  let active = 0;
 
 

@@ -40,4 +40,10 @@ body {
   border: none;
 }
 
+.logoButton:hover {
+  transform: scale(1.1);
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
 /*# sourceMappingURL=restaurant.css.map */

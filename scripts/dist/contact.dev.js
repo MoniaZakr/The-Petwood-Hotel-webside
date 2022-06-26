@@ -1,7 +1,7 @@
 "use strict";
 
 var pictures = document.querySelector(".pictures");
-var images = document.querySelectorAll(".pictures img");
+var images = document.querySelectorAll(".pictures .hotel");
 var active = 0;
 var changeBaner = setInterval(function () {
   switch (active) {
