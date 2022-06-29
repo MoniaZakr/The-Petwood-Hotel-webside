@@ -1,6 +1,8 @@
 const pictures = document.querySelector(".pictures");
 const images = document.querySelectorAll(".pictures .hotel");
- let active = 0;
+let active = 0;
+const submitButton = document.querySelector(".submit");
+const input = document.querySelector(".direction");
 
 
 let changeBaner = setInterval(() => {
@@ -43,4 +45,12 @@ let changeBaner = setInterval(() => {
           }
       }
 },2500);
+
+function getLocation() {
+   document.location.href("http://127.0.0.1:5500/pages/googleMap.html")
+}
+submitButton.addEventListener("click", getLocation)
+
+   
+
 

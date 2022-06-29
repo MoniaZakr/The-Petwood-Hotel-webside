@@ -3,6 +3,8 @@
 var pictures = document.querySelector(".pictures");
 var images = document.querySelectorAll(".pictures .hotel");
 var active = 0;
+var submitButton = document.querySelector(".submit");
+var input = document.querySelector(".direction");
 var changeBaner = setInterval(function () {
   switch (active) {
     case 0:
@@ -46,4 +48,10 @@ var changeBaner = setInterval(function () {
       }
   }
 }, 2500);
+
+function getLocation() {
+  document.location.href("http://127.0.0.1:5500/pages/googleMap.html");
+}
+
+submitButton.addEventListener("click", getLocation);
 //# sourceMappingURL=contact.dev.js.map
