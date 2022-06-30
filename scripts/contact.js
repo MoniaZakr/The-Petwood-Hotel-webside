@@ -44,9 +44,3 @@ let changeBaner = setInterval(() => {
       }
 },2500);
 
-<<<<<<< HEAD
-=======
-   
-
-
->>>>>>> a8d523a (Created onclick function to redirect to another page)
