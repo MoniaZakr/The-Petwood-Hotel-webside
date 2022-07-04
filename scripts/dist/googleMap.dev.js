@@ -1,6 +1,8 @@
 "use strict";
 
 function intMap() {
+  var DirectionsRenderer = new google.maps.DirectionsRenderer();
+  var DirectionsService = new google.maps.DirectionsService();
   var location = {
     lat: 53.152360,
     lng: -0.224120

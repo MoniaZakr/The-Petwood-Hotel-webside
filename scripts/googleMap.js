@@ -1,4 +1,7 @@
 function intMap() {
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const directionsService = new google.maps.DirectionsService();
+
     const location = {lat :53.152360, lng :-0.224120};
     const map = new google.maps.Map(document.getElementById("map"), { zoom: 8,
     center: location});
