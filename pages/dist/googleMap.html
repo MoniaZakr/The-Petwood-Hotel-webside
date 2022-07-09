@@ -9,15 +9,17 @@
 </head>
 <body>
   <div class="wrapper">
-    <input type="text" class="input" placeholder="Location">
-    <input type="text" class="input" placeholder="Destination">
+    <input type="text" class="input" id="origin" placeholder="Location">
+    <input type="text" class="input" id="destination" placeholder="Destination">
     <label for="mode">Mode of travel:</label>
     <select name="mode" id="mode">
-      <option value="car">car</option>
-      <option value="walk">walk</option>
-      <option value="bus">bus</option>
+      <option value="WALKING" selected >car</option>
+      <option value="BICYCLING" >walk</option>
+      <option value="TRANSIT">bus</option>
     </select>
-    <button type="button" class="search">Search</button>
+    <button type="button" class="search" onChange="calcRoute()">Search</button>
+    <div class="output"></div>
+    
       
     
 
@@ -31,6 +33,6 @@
     
   
   <script src="../scripts/googleMap.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHs1H6XF6lk9IFTxfoQq4CkzJ5XaFrp98&callback=intMap"></script>  
+  <script async src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyBHs1H6XF6lk9IFTxfoQq4CkzJ5XaFrp98&libraries=places&callback=intMap"></script> 
 </body>
 </html>
