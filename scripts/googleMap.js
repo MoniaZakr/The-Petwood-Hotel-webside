@@ -1,20 +1,18 @@
-const selectMode = document.getElementById("mode").value;
+
 const button = document.querySelector(".search");
 const input1 = document.getElementById('origin');
-const input2 = document.getElementById('destination');
-
-
 
 
 function intMap() {
    
 
     const location = {lat :53.152360, lng :-0.224120};
+    
     const map = new google.maps.Map(document.getElementById("map"), { zoom: 8,
     center: location});
-
+    
     const marker = new google.maps.Marker({
-        position:{lat :53.152360, lng :-0.224120},
+        position: location,
         map:map,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     })
@@ -27,24 +25,23 @@ function intMap() {
     });
     
     autocomplete1 = new google.maps.places.Autocomplete(input1);
-    autocomplete2 = new google.maps.places.Autocomplete(input2);
 
     const directionsDisplay = new google.maps.DirectionsRenderer();
     const directionsService = new google.maps.DirectionsService();
-
+    
+    
     directionsDisplay.setMap(map);
     calcRoute(directionsDisplay, directionsService);
-    document.getElementById("mode").addEventListener("change",() =>{
-        calcRoute(directionsDisplay, directionsService)
-    } )
-    
+    document.getElementById("mode").addEventListener("change",() => {
+        calcRoute(directionsDisplay, directionsService );
+    })
 }
-function calcRoute(directionsDisplay, directionsService) {
 
-    var request = {
+function calcRoute(directionsDisplay, directionsService) {
+    const request = {
         origin: input1.value,
-        destination: input2.value,
-        travelMode: google.maps.TravelMode[selectMode], //WALKING, BYCYCLING, TRANSIT
+        destination: {lat :53.152360, lng :-0.224120},
+        travelMode: google.maps.TravelMode[selectMode], 
     }
     console.log(request.travelMode);
 
@@ -54,7 +51,7 @@ function calcRoute(directionsDisplay, directionsService) {
 
             //Get distance and time
             const output = document.querySelector('.output');
-            output.innerHTML = "<div class='alert-info'>From: " + document.getElementById("origin").value + ".<br />To: " + document.getElementById("destination").value + ".<br /> Driving distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
+            output.innerHTML = "<div class='alert-info'>From: " + document.getElementById("origin").value + ".<br />To: Petwood Hotel"  + ".<br /> Distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
 
             //display route
             directionsDisplay.setDirections(result);
@@ -68,9 +65,11 @@ function calcRoute(directionsDisplay, directionsService) {
             output.innerHTML = "<div class='alert-danger'> Could not retrieve driving distance.</div>";
         }
     });
-
 }
-// document.getElementById("mode").addEventListener("change", calcRoute)
+
+
+    
+
     
 
 

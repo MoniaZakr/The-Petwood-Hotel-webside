@@ -10,13 +10,18 @@
 <body>
   <div class="wrapper">
     <input type="text" class="input" id="origin" placeholder="Location">
-    <input type="text" class="input" id="destination" placeholder="Destination">
-    <label for="mode">Mode of travel:</label>
-    <select name="mode" id="mode">
-      <option value="WALKING" selected >car</option>
-      <option value="BICYCLING" >walk</option>
-      <option value="TRANSIT">bus</option>
-    </select>
+    <div class="choseInput">Select mode:
+      <label for="driving">Driving</label>
+      <input type="radio" value="DRIVING" class="driving" checked>
+      <label for="driving">Bicycling</label>
+      <input type="radio" value="BICYCLING" >
+      <label for="driving">Transit</label>
+      <input type="radio" value="TRANSIT">
+      <label for="driving">Walking</label>
+      <input type="radio" value="WALKING">
+    </div>
+    
+
     <button type="button" class="search" onChange="calcRoute()">Search</button>
     <div class="output"></div>
     
