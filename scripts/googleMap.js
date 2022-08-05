@@ -4,9 +4,7 @@ const input1 = document.getElementById('origin');
 
 
 function intMap() {
-   
-
-    const location = {lat :53.152360, lng :-0.224120};
+   const location = {lat :53.152360, lng :-0.224120};
     
     const map = new google.maps.Map(document.getElementById("map"), { zoom: 8,
     center: location});
