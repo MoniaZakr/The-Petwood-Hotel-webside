@@ -126,7 +126,6 @@ body {
             & .text1 {
                 margin-top: 30px;
                 line-height: 1.5rem;
-                // flex-basis: 100%;
                 a {
                     color: $goldenColor;
                     &:hover {
@@ -141,10 +140,10 @@ body {
                 animation: textclip 2s linear infinite;
                 background-image: linear-gradient(
                     -225deg,
-                    $mainColor 0%,
+                    #fff800 0%,
                     $goldenColor 29%,
                     $sideColor 67%,
-                    #fff800 100%
+                    $mainColor 100%,
                     );
                 background-size: auto auto;
                 background-clip: border-box;
@@ -156,7 +155,7 @@ body {
                 display: inline-block;
                 @keyframes textclip {
                     to {
-                        background-position: 200% center;
+                        background-position: -200% center;
                     }
                 }
             }
