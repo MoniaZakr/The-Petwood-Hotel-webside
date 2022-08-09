@@ -105,13 +105,13 @@ body {
             margin: 15px;
             text-align: center;
             color: lighten($textColor, 80%);
-            animation: textclip 4s linear infinite;
+            animation: textclip 3s linear infinite;
             background-image: linear-gradient(
                 -225deg,
                 #fff800 0%,
                 $goldenColor 29%,
                 $sideColor 67%,
-                $textColor 100%,
+                lighten($mainColor,100%) 100%,
                 );
             background-size: auto auto;
             background-clip: border-box;
@@ -151,6 +151,7 @@ body {
             font-size: small;
             font-style: italic;
             font-weight: lighter; 
+            margin-top: 30px;
          }
     }
 }    

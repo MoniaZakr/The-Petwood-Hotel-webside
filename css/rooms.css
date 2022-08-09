@@ -113,9 +113,9 @@ body {
   margin: 15px;
   text-align: center;
   color: white;
-  -webkit-animation: textclip 4s linear infinite;
-          animation: textclip 4s linear infinite;
-  background-image: linear-gradient(-225deg, #fff800 0%, #96651b 29%, #323030 67%, #faf9f6 100%);
+  -webkit-animation: textclip 3s linear infinite;
+          animation: textclip 3s linear infinite;
+  background-image: linear-gradient(-225deg, #fff800 0%, #96651b 29%, #323030 67%, white 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -165,5 +165,6 @@ body {
   font-size: small;
   font-style: italic;
   font-weight: lighter;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=rooms.css.map */
