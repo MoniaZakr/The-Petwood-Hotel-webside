@@ -7,6 +7,7 @@
 $mainColor:rgb(63, 60, 60);
 $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
+$goldenColor:rgb(150, 101, 27);
 $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 
 @mixin backgroundPhotos {
@@ -14,6 +15,14 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     max-height: 100%;
     width: 100%;
     object-fit: cover;
+}
+@mixin headingStyle {
+    display: block;
+    font-size: 1.1rem;
+    color: $goldenColor;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,5 +55,101 @@ body {
         letter-spacing: 0.3rem;
         opacity: 0.6;
     }
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    & .mainText {
+        width: 40vw;
+        margin: 15px 25px;
+        color: $textColor;
+        .heading {
+            @include headingStyle()
+        }
+        .text {
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 5px 15px 5px;
+        }
+        .address {
+            text-align: center;
+        }
+        .contact {
+            margin: 15px;
+            a {
+                color: $goldenColor;
+                &:hover {
+                    color: lighten($goldenColor, 20% );
+                }
+            }
+        }
+    }
+    & .form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40vw;
+        margin: 5px;
+        & label {
+            width: 40%;
+            text-align: end;
+        }
+        & input {
+            width: 40%;
+            margin: 5px;
+            outline: none;
+            border: 1px solid $goldenColor;
+            
+        }
+        & .phoneNumber::-webkit-outer-spin-button,.phoneNumber::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        & .phoneNumber[type=number] {
+            -moz-appearance: textfield;
+        } 
+        & .submit {
+            width: 25%;
+            letter-spacing: 1px;
+            padding: 1px 5px;
+            margin: 5px 280px;
+            border-color: $goldenColor;
+            background-color: $goldenColor;
+        }   
+    }
+}
+.saidText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: large;
+    width: 50vw;
+    margin: 150px auto;
+    align-content: space-between;
+    & .text {
+        width: 100%;
+        letter-spacing: 1.1px;
+        color: $textColor;
+        margin-bottom: 50px;
+    }
+    & .pdf {
+        display: inline-block;
+        font-size: 1rem;
+        color: $goldenColor;
+        height: 15px;
+        width: 250px;
+        background:url(../photo/pdf_bg.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 10px;
+        text-align: left;
+        font-weight: lighter;
+        padding-left: 80px;
+        padding-bottom: 45px;
+        text-decoration: none;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
 }
     

@@ -46,4 +46,121 @@ body {
   opacity: 0.6;
 }
 
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .mainText {
+  width: 40vw;
+  margin: 15px 25px;
+  color: #faf9f6;
+}
+
+.container .mainText .heading {
+  display: block;
+  font-size: 1.1rem;
+  color: #96651b;
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+}
+
+.container .mainText .text {
+  text-align: end;
+  line-height: 1.5rem;
+  margin: 5px 5px 15px 5px;
+}
+
+.container .mainText .address {
+  text-align: center;
+}
+
+.container .mainText .contact {
+  margin: 15px;
+}
+
+.container .mainText .contact a {
+  color: #96651b;
+}
+
+.container .mainText .contact a:hover {
+  color: #dc9c3b;
+}
+
+.container .form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  margin: 5px;
+}
+
+.container .form label {
+  width: 40%;
+  text-align: end;
+}
+
+.container .form input {
+  width: 40%;
+  margin: 5px;
+  outline: none;
+  border: 1px solid #96651b;
+}
+
+.container .form .phoneNumber::-webkit-outer-spin-button, .container .form .phoneNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container .form .phoneNumber[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container .form .submit {
+  width: 25%;
+  letter-spacing: 1px;
+  padding: 1px 5px;
+  margin: 5px 280px;
+  border-color: #96651b;
+  background-color: #96651b;
+}
+
+.saidText {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: large;
+  width: 50vw;
+  margin: 150px auto;
+  align-content: space-between;
+}
+
+.saidText .text {
+  width: 100%;
+  letter-spacing: 1.1px;
+  color: #faf9f6;
+  margin-bottom: 50px;
+}
+
+.saidText .pdf {
+  display: inline-block;
+  font-size: 1rem;
+  color: #96651b;
+  height: 15px;
+  width: 250px;
+  background: url(../photo/pdf_bg.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+  text-align: left;
+  font-weight: lighter;
+  padding-left: 80px;
+  padding-bottom: 45px;
+  text-decoration: none;
+}
+
+.saidText .pdf:hover {
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=restaurant.css.map */
