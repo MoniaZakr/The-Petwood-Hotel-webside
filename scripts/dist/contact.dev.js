@@ -3,6 +3,8 @@
 var pictures = document.querySelector(".pictures");
 var images = document.querySelectorAll(".pictures .hotel");
 var active = 0;
+var submitButton = document.querySelector(".submit");
+var input = document.querySelector(".direction");
 var changeBaner = setInterval(function () {
   switch (active) {
     case 0:
