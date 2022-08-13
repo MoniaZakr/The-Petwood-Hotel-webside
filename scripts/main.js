@@ -1,11 +1,26 @@
 const navigation = [...document.querySelectorAll(".navigation li")];
 const pictures = [...document.querySelectorAll(".pictures .img")]
 
+
+
 for (var i = 0; i < navigation.length; i++) {
-    navigation[i].addEventListener( "mouseover", toggle);
+    navigation[i].addEventListener( "mouseover", toggle)
     navigation[i].addEventListener( "mouseleave", exit);
 }
-  
+
+// var delay = function (navigation, callback) {
+//     var timeout = null;
+//     navigation.onmouseover = function() {
+//         // Set timeout to be a timer which will invoke callback after 1s
+//         timeout = setTimeout(callback, 2000);
+//     };
+
+//     navigation.onmouseout = function() {
+//         // Clear any timers set to timeout
+//         clearTimeout(timeout);
+//     }
+// };
+
 function toggle() {
     const li = this;
     navigation.forEach(item => 
@@ -16,19 +31,25 @@ function toggle() {
     
     if(li === navigation[0]) {
         pictures[0].classList.add("active")
+       
     }
     
     else if(li === navigation[1]) {
         pictures[1].classList.add("active")
     }
+        
     else if(li === navigation[2]) {
         pictures[2].classList.add("active")
     }
+        
     else if(li === navigation[3]) {
         pictures[3].classList.add("active")
-    }else if(li === navigation[4]) {
-        pictures[4].classList.add("active")}
+    }   
+    else if(li === navigation[4]) {
+        pictures[4].classList.add("active")
+    }
 }
+       
 
 function exit() {
     navigation.forEach(item => {

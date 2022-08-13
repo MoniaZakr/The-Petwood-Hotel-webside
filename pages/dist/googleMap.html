@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google map</title>
-    <link rel="stylesheet" href="../css/googleMap.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google map</title>
+  <link rel="stylesheet" href="../css/googleMap.css">
 </head>
 <body>
-    <div id="map"></div>
+  <div class="wrapper">
+    <input type="text" class="input" id="origin" placeholder="Location">
+    <div class="choseInput">Select mode:
+      <label for="driving">Driving</label>
+      <input type="radio" value="DRIVING" class="driving" checked>
+      <label for="driving">Bicycling</label>
+      <input type="radio" value="BICYCLING" >
+      <label for="driving">Transit</label>
+      <input type="radio" value="TRANSIT">
+      <label for="driving">Walking</label>
+      <input type="radio" value="WALKING">
+    </div>
+    
+
+    <button type="button" class="search" onChange="calcRoute()">Search</button>
+    <div class="output"></div>
+    
+      
+    
+
+  </div>
+  <div id="map">
+
+  
+  
     
 
     
   
   <script src="../scripts/googleMap.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=intMap"></script>  
+
 </body>
 </html>

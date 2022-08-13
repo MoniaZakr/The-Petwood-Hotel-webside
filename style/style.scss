@@ -81,6 +81,7 @@ body {
             flex-direction: row;
             justify-content: space-evenly;
             list-style: none;
+            transition: 2s;
             @include mg(x-small) {
                 overflow: hidden;
             }
@@ -89,7 +90,7 @@ body {
                 align-items: flex-end;
                 justify-content: center;
                 z-index: 4;
-                transition: 0.3s;
+                // transition: 2s;
                 @include mg(small) {
                     margin: 0;
                 }
@@ -159,30 +160,7 @@ body {
                    transform: rotate(-90deg)
                 }
             }
-            // .rooms{
-            //     @include backgroundPhotos;
-            //     @include mg(x-small) {
-            //         transform: rotate(-90deg)
-            //     };
-            // }
-            // .restaurant{
-            //     @include backgroundPhotos;
-            //     @include mg(x-small) {
-            //         transform: rotate(-90deg)
-            //     };
-            // }
-            // .weedings{
-            //     @include backgroundPhotos;
-            //     @include mg(x-small) {
-            //         transform: rotate(-90deg)
-            //     };
-            // }
-            // .relax{
-            //     @include backgroundPhotos;
-            //     @include mg(x-small) {
-            //         transform: rotate(-90deg)
-            //     };
-            // }
+           
             .active{
                 visibility: visible;
                 z-index: 3;

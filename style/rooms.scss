@@ -7,6 +7,7 @@
 $mainColor:rgb(63, 60, 60);
 $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
+$goldenColor:rgb(150, 101, 27);
 $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 
 @mixin backgroundPhotos {
@@ -51,8 +52,106 @@ body {
         }
     }
 }
-figure {
-    margin: 40px;
-    text-align: center;
+.logoButton {
+    display: block;
+    margin: 40px auto;
+    background: none;
+    border: none;
+    &:hover {
+        transform: scale(1.1);
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
 }
-    
+.booking {
+    position: absolute;
+    bottom: -45%;
+    right: 20%;
+    height: 50px;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid rgb(151, 102, 28);
+    outline: none;
+    background-color:rgb(184, 184, 186) ;
+    color: rgb(151, 102, 28);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    & .mainText {
+        width: 40%;
+        margin: 15px 25px;
+        color: $textColor;
+        & .heading {
+            display: block;
+            font-size: 1.1rem;
+            color: $goldenColor;
+            width: 100%;
+            text-align: center;
+            margin: 5px;
+        }
+        & .text1 {
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 15px 15px 5px; 
+        }
+        & .text2 {
+            margin: 15px;
+            text-align: center;
+            color: lighten($textColor, 80%);
+            animation: textclip 3s linear infinite;
+            background-image: linear-gradient(
+                -225deg,
+                #fff800 0%,
+                $goldenColor 29%,
+                $sideColor 67%,
+                lighten($mainColor,100%) 100%,
+                );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            @keyframes textclip {
+                to {
+                    background-position: -200% center;
+                }
+            }
+        }
+    }
+    & .saidText {
+        width: 40%;
+        margin: 15px 20px;
+        color: $textColor;
+        & .sideHeading {
+            color: lighten($textColor, 80%);
+            margin: 5px;
+            text-align: center;
+        }
+        & .text1 {
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 15px 15px 5px;
+        }
+        & .text2 {
+            margin: 0 15px 15px;
+            text-align: center;
+            
+        }
+        & p:last-child {
+            font-size: small;
+            font-style: italic;
+            font-weight: lighter; 
+            margin-top: 30px;
+         }
+    }
+}    

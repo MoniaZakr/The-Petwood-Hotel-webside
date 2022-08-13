@@ -71,6 +71,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
+  transition: 2s;
 }
 
 @media (max-width: 580px) {
@@ -84,7 +85,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   z-index: 4;
-  transition: 0.3s;
 }
 
 @media (max-width: 460px) {
