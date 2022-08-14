@@ -7,6 +7,7 @@
 $mainColor:rgb(63, 60, 60);
 $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
+$goldenColor:rgb(150, 101, 27);
 $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 
 @mixin backgroundPhotos {
@@ -15,6 +16,14 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     left: 0;
     height: 100%;
     width: 100%;
+}
+@mixin headingStyle {
+    display: block;
+    font-size: 1.1rem;
+    color: $goldenColor;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
 }
 
 body {
@@ -50,6 +59,53 @@ body {
         opacity: 0.6;
     }
 }
+.contact {
+    position: absolute;
+    top: 400px;
+    right: 115px;
+    font-size: smaller;
+    color: $textColor;
+    text-transform: capitalize;
+    & a {
+        display:inline-block;
+        text-decoration: none;
+        color: $goldenColor;
+        margin-left: 7px;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    & .mainText {
+        width: 40vw;
+        margin: 15px 25px;
+        color: $textColor;
+        & .heading {
+            @include headingStyle()
+        }
+        & .text {
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 5px 15px 5px;
+        }
+    }
+    & .sideText {
+        width: 40vw;
+        margin: auto 25px;
+        color: $textColor;
+        & .text { 
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 5px 15px 5px;
+        }
+        & .text:last-child {
+            margin-top: 15px;
+            font-weight: lighter;
+            font-style: italic;
+        }
 
-
-    
+    }
+}
