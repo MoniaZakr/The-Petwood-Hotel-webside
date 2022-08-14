@@ -53,4 +53,54 @@ body {
   letter-spacing: 0.3rem;
   opacity: 0.6;
 }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .mainText {
+  width: 40vw;
+  margin: auto 25px;
+  color: #faf9f6;
+}
+
+.container .mainText .heading {
+  display: block;
+  font-size: 1.1rem;
+  color: #96651b;
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+}
+
+.container .mainText .text {
+  text-align: end;
+  line-height: 1.5rem;
+  margin: 5px 5px 15px 5px;
+}
+
+.container .sideText {
+  width: 40vw;
+  margin: 15px 25px;
+  color: #faf9f6;
+}
+
+.container .sideText .heading {
+  display: block;
+  font-size: 1.1rem;
+  color: #96651b;
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+}
+
+.container .sideText .text {
+  text-align: end;
+  line-height: 1.5rem;
+  margin: 5px 5px 15px 5px;
+}
 /*# sourceMappingURL=relax.css.map */
