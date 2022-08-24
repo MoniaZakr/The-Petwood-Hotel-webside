@@ -8,6 +8,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
+  border: 5px solid #96651b;
 }
 
 .wrapper {
@@ -77,7 +78,7 @@ body {
 .container .mainText .text {
   text-align: end;
   line-height: 1.5rem;
-  margin: 5px 5px 15px 5px;
+  margin: 5px 5px 55px 5px;
 }
 
 .container .mainText .address {
@@ -109,16 +110,19 @@ body {
 .container .form label {
   width: 40%;
   text-align: end;
+  margin: auto 7px;
 }
 
 .container .form input {
   width: 40%;
   margin: 5px;
+  padding: 3px;
   outline: none;
-  border: 1px solid #96651b;
+  border: 2px solid #96651b;
+  color: #3f3c3c;
 }
 
-.container .form .phoneNumber::-webkit-outer-spin-button, .container .form .phoneNumber::-webkit-inner-spin-button {
+.container .form .phoneNumber::-webkit-outer-spin-button, .container .form phoneNumber::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -134,6 +138,7 @@ body {
   margin: 5px 280px;
   border-color: #96651b;
   background-color: #96651b;
+  font-style: italic;
 }
 
 .saidText {
@@ -142,11 +147,12 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: large;
-  width: 50vw;
-  margin: 150px auto;
+  width: 60vw;
+  margin: 130px auto;
   -ms-flex-line-pack: justify;
       align-content: space-between;
 }
@@ -155,7 +161,7 @@ body {
   width: 100%;
   letter-spacing: 1.1px;
   color: #faf9f6;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .saidText .pdf {

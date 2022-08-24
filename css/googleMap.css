@@ -3,6 +3,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 5px solid #96651b;
 }
 
 .wrapper {
@@ -10,7 +11,7 @@ body {
   top: 10px;
   right: 60px;
   height: 90px;
-  width: 360px;
+  width: 500px;
   padding: 5px;
   background-color: #c7dff7;
   opacity: 0.8;
@@ -22,8 +23,11 @@ body {
 }
 
 .wrapper .input {
+  display: inline-block;
+  border: 1px solid #96651b;
   outline: none;
   text-align: center;
+  margin-left: 0;
   cursor: pointer;
 }
 
@@ -31,49 +35,54 @@ body {
   color: transparent;
   background-color: #b1d3f5;
   border: 1px solid #858484;
+  outline: none;
 }
 
 .wrapper .input:focus:-ms-input-placeholder {
   color: transparent;
   background-color: #b1d3f5;
   border: 1px solid #858484;
+  outline: none;
 }
 
 .wrapper .input:focus::-ms-input-placeholder {
   color: transparent;
   background-color: #b1d3f5;
   border: 1px solid #858484;
+  outline: none;
 }
 
 .wrapper .input:focus::placeholder {
   color: transparent;
   background-color: #b1d3f5;
   border: 1px solid #858484;
+  outline: none;
 }
 
-.wrapper select option {
-  background-color: #c7dff7;
-  border: none;
-  opacity: 0.8;
+.wrapper .choseInput {
+  font-size: medium;
+  margin-bottom: 10px;
 }
 
-.wrapper label {
+.wrapper .choseInput label {
   display: inline-block;
   margin-top: 10px;
-  margin-right: 5px;
 }
 
-.wrapper .search {
+.wrapper .choseInput .search {
   display: block;
   margin: 10px auto;
   padding: 4px 6px;
+  border: 1px solid #96651b;
 }
 
 .wrapper .output {
-  height: 50px;
-  width: 200px;
+  height: 100px;
+  width: 500px;
   background-color: aquamarine;
   position: absolute;
+  top: 120px;
+  right: 8px;
   z-index: 8;
 }
 

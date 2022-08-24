@@ -8,6 +8,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
+  border: 5px solid #96651b;
 }
 
 .wrapper {
