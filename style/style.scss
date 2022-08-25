@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 $mainColor:rgb(63, 60, 60);
 $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
@@ -19,6 +20,7 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
         transform: rotate(-90deg)
     }
 }
+
 $breakpoints:(
     large:(max-width:1040px),
     medium:(max-width:800px),
@@ -26,6 +28,7 @@ $breakpoints:(
     small :(max-width:460px),
     extra-small :(max-width:375px),
 );
+
 @mixin mg($breakpoint) {
     $size:map-get($map: $breakpoints, $key:$breakpoint);
     @if(size) {
@@ -34,13 +37,12 @@ $breakpoints:(
         }
     }
 }
+
 body {
     height: 100vh;
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
-    border: 5px solid $goldenColor;
-    overflow-x: hidden;
     @include mg(medium) {
         height: 100vh;
         max-height: 100vh;
@@ -234,10 +236,6 @@ figure {
         transform: scale(1.1);
     }
 }   
-
-   
-        
-        
 .footer {
     height: 20vh;
     width: 100%;
@@ -289,5 +287,4 @@ figure {
             margin: 0 3px 2px 3px;
         }
     }
-    
 }

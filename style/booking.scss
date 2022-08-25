@@ -46,8 +46,7 @@ address {
             text-decoration: none;
             color: $goldenColor;
             &:hover {
-                transform: scale(1.1);
-                margin: 10px;
+                color:lighten($goldenColor, 20% ); ;
             }
         }
     }
@@ -90,5 +89,8 @@ address {
         border-color: $goldenColor;
         background-color: $goldenColor;
         font-style: italic;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

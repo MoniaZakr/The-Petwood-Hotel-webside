@@ -1,1 +1,1 @@
-{"version":3,"sources":["booking.js"],"names":["inputs","document","querySelectorAll"],"mappings":";;AAAA,IAAMA,MAAM,GAAGC,QAAQ,CAACC,gBAAT,CAA0B,OAA1B,CAAf,C,CAEA;AACA;AACA;AACA","sourcesContent":["const inputs = document.querySelectorAll(\"input\");\r\n\r\n// function clear() {\r\n// const clearInpts = inputs.forEach(input => \r\n//     input = \"\")\r\n// }\r\n"],"file":"booking.dev.js"}
+{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":[],"file":"booking.dev.js"}

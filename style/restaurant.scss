@@ -78,6 +78,9 @@ body {
         .contact {
             margin: 15px;
             a {
+
+                display: inline-block;
+                margin-left: 3px;
                 color: $goldenColor;
                 &:hover {
                     color: lighten($goldenColor, 20% );
@@ -118,6 +121,9 @@ body {
             border-color: $goldenColor;
             background-color: $goldenColor;
             font-style: italic;
+            &:hover {
+                transform: scale(1.1);
+            }
         }   
     }
 }

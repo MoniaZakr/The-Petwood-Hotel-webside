@@ -82,6 +82,8 @@ body {
 }
 
 .container .mainText .contact a {
+  display: inline-block;
+  margin-left: 3px;
   color: #96651b;
 }
 
@@ -128,6 +130,10 @@ body {
   border-color: #96651b;
   background-color: #96651b;
   font-style: italic;
+}
+
+.container .form .submit:hover {
+  transform: scale(1.1);
 }
 
 .saidText {

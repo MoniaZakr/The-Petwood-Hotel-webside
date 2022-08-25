@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
-  overflow-x: hidden;
 }
 
 @media (max-width: 800px) {

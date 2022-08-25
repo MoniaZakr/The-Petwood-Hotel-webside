@@ -52,9 +52,7 @@ address p .contact {
 }
 
 address p .contact:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  margin: 10px;
+  color: #dc9c3b;
 }
 
 .form {
@@ -106,5 +104,10 @@ address p .contact:hover {
   border-color: #96651b;
   background-color: #96651b;
   font-style: italic;
+}
+
+.form .submit:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=booking.css.map */
