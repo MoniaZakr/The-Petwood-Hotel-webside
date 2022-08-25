@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +13,33 @@
     <input type="text" class="input" id="origin" placeholder="Location">
     <div class="choseInput">Select mode:
       <label for="driving">Driving</label>
-      <input type="radio" value="DRIVING" name="radio" class="driving" checked>
-      <label for="bicycling">Bicycling</label>
-      <input type="radio" value="BICYCLING"name="radio" class="bicycling"  >
-      <label for="transit">Transit</label>
-      <input type="radio" value="TRANSIT" name="radio" class="transit">
-      <label for="walking">Walking</label>
-      <input type="radio" value="WALKING" name="radio" class="walking" >
+      <input type="radio" value="DRIVING" class="driving" checked>
+      <label for="driving">Bicycling</label>
+      <input type="radio" value="BICYCLING" >
+      <label for="driving">Transit</label>
+      <input type="radio" value="TRANSIT">
+      <label for="driving">Walking</label>
+      <input type="radio" value="WALKING">
     </div>
+    
+
     <button type="button" class="search" onChange="calcRoute()">Search</button>
     <div class="output"></div>
+    
+      
+    
+
   </div>
   <div id="map">
 
+  
+  
+    
+
+    
+  
   <script src="../scripts/googleMap.js"></script>
-  <script async src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyBHs1H6XF6lk9IFTxfoQq4CkzJ5XaFrp98&libraries=places&callback=intMap"></script> 
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=intMap"></script>  
 </body>
 </html>
