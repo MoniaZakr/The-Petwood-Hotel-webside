@@ -15,18 +15,7 @@ var pictures = _toConsumableArray(document.querySelectorAll(".pictures .img"));
 for (var i = 0; i < navigation.length; i++) {
   navigation[i].addEventListener("mouseover", toggle);
   navigation[i].addEventListener("mouseleave", exit);
-} // var delay = function (navigation, callback) {
-//     var timeout = null;
-//     navigation.onmouseover = function() {
-//         // Set timeout to be a timer which will invoke callback after 1s
-//         timeout = setTimeout(callback, 2000);
-//     };
-//     navigation.onmouseout = function() {
-//         // Clear any timers set to timeout
-//         clearTimeout(timeout);
-//     }
-// };
-
+}
 
 function toggle() {
   var li = this;

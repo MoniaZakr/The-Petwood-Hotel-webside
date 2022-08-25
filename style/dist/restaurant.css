@@ -7,6 +7,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
+  border: 5px solid #96651b;
 }
 
 .wrapper {
@@ -69,7 +70,7 @@ body {
 .container .mainText .text {
   text-align: end;
   line-height: 1.5rem;
-  margin: 5px 5px 15px 5px;
+  margin: 5px 5px 55px 5px;
 }
 
 .container .mainText .address {
@@ -81,6 +82,8 @@ body {
 }
 
 .container .mainText .contact a {
+  display: inline-block;
+  margin-left: 3px;
   color: #96651b;
 }
 
@@ -98,16 +101,19 @@ body {
 .container .form label {
   width: 40%;
   text-align: end;
+  margin: auto 7px;
 }
 
 .container .form input {
   width: 40%;
   margin: 5px;
+  padding: 3px;
   outline: none;
-  border: 1px solid #96651b;
+  border: 2px solid #96651b;
+  color: #3f3c3c;
 }
 
-.container .form .phoneNumber::-webkit-outer-spin-button, .container .form .phoneNumber::-webkit-inner-spin-button {
+.container .form .phoneNumber::-webkit-outer-spin-button, .container .form phoneNumber::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -123,15 +129,20 @@ body {
   margin: 5px 280px;
   border-color: #96651b;
   background-color: #96651b;
+  font-style: italic;
+}
+
+.container .form .submit:hover {
+  transform: scale(1.1);
 }
 
 .saidText {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: large;
-  width: 50vw;
-  margin: 150px auto;
+  width: 60vw;
+  margin: 130px auto;
   align-content: space-between;
 }
 
@@ -139,7 +150,7 @@ body {
   width: 100%;
   letter-spacing: 1.1px;
   color: #faf9f6;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .saidText .pdf {

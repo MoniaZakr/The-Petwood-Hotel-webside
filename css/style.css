@@ -10,7 +10,6 @@ body {
   min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
-  overflow-x: hidden;
 }
 
 @media (max-width: 800px) {
@@ -284,23 +283,29 @@ figure {
   }
 }
 
-.mainText .booking {
-  height: 50px;
+.booking {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  position: absolute;
+  bottom: -25%;
+  right: 20%;
+  height: 40px;
   width: 100px;
-  display: block;
-  margin: 35px auto;
-  padding: 5px;
+  padding: 2px;
+  line-height: 40px;
   border: 1px solid #97661c;
   outline: none;
   background-color: #b8b8ba;
   color: #97661c;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
   -webkit-box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
           box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
-.mainText .booking:hover {
+.booking:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

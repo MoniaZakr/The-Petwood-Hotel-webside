@@ -21,6 +21,7 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
+    border: 5px solid $goldenColor;
 }
 .wrapper {
     filter: $shadow;
@@ -63,30 +64,13 @@ body {
         opacity: 0.6;
     }
 }
-.booking {
-    position: absolute;
-    bottom: -45%;
-    right: 20%;
-    height: 50px;
-    width: 100px;
-    padding: 5px;
-    border: 1px solid rgb(151, 102, 28);
-    outline: none;
-    background-color:rgb(184, 184, 186) ;
-    color: rgb(151, 102, 28);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
-    &:hover {
-        transform: scale(1.1);
-    }
-}
 .container {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
     & .mainText {
         width: 40%;
-        margin: 15px 25px;
+        margin: 15px 25px 30px 25px;
         color: $textColor;
         & .heading {
             display: block;
@@ -99,10 +83,10 @@ body {
         & .text1 {
             text-align: end;
             line-height: 1.5rem;
-            margin: 5px 15px 15px 5px; 
+            margin: 5px 15px 20px 5px; 
         }
         & .text2 {
-            margin: 15px;
+            margin-left: 100px;
             text-align: center;
             color: lighten($textColor, 80%);
             animation: textclip 3s linear infinite;
@@ -130,7 +114,7 @@ body {
     }
     & .saidText {
         width: 40%;
-        margin: 15px 20px;
+        margin: 15px 20px 30px 20px;
         color: $textColor;
         & .sideHeading {
             color: lighten($textColor, 80%);
@@ -140,10 +124,10 @@ body {
         & .text1 {
             text-align: end;
             line-height: 1.5rem;
-            margin: 5px 15px 15px 5px;
+            margin: 5px 15px 25px 5px;
         }
         & .text2 {
-            margin: 0 15px 15px;
+            margin: 0 15px 20px;
             text-align: center;
             
         }
@@ -151,7 +135,30 @@ body {
             font-size: small;
             font-style: italic;
             font-weight: lighter; 
-            margin-top: 30px;
-         }
+            margin-top: 20px;
+        }
     }
-}    
+}
+.booking {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    position: absolute;
+    bottom: -47%;
+    right: 20%;
+    height: 40px;
+    width: 100px;
+    padding: 2px;
+    border: 1px solid rgb(151, 102, 28);
+    outline: none;
+    background-color:rgb(184, 184, 186) ;
+    color: rgb(151, 102, 28);
+    font-size: 1.1rem;
+    line-height: 40px;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+    &:hover {
+        transform: scale(1.1);
+    }   
+}

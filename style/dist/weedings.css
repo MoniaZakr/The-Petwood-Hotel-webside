@@ -7,6 +7,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #3f3c3c;
+  border: 5px solid #96651b;
 }
 
 .wrapper {
@@ -46,6 +47,70 @@ body {
   transform: scale(1.1);
   letter-spacing: 0.3rem;
   opacity: 0.6;
+}
+
+.contact {
+  position: absolute;
+  top: 400px;
+  right: 115px;
+  font-size: smaller;
+  color: #faf9f6;
+  text-transform: capitalize;
+}
+
+.contact a {
+  display: inline-block;
+  text-decoration: none;
+  color: #96651b;
+  margin-left: 7px;
+}
+
+.contact a:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .mainText {
+  width: 40vw;
+  margin: 15px 25px;
+  color: #faf9f6;
+}
+
+.container .mainText .heading {
+  display: block;
+  font-size: 1.1rem;
+  color: #96651b;
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+}
+
+.container .mainText .text {
+  text-align: end;
+  line-height: 1.5rem;
+  margin: 5px 5px 15px 5px;
+}
+
+.container .sideText {
+  width: 40vw;
+  margin: auto 25px;
+  color: #faf9f6;
+}
+
+.container .sideText .text {
+  text-align: end;
+  line-height: 1.5rem;
+  margin: 5px 5px 15px 5px;
+}
+
+.container .sideText .text:last-child {
+  margin-top: 15px;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=weedings.css.map */

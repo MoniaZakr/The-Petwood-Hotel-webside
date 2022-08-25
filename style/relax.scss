@@ -7,6 +7,7 @@
 $mainColor:rgb(63, 60, 60);
 $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
+$goldenColor:rgb(150, 101, 27);
 $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 
 @mixin backgroundPhotos {
@@ -17,9 +18,18 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     width: 100%;
     object-fit: cover;
 }
+@mixin headingStyle {
+    display: block;
+    font-size: 1.1rem;
+    color: $goldenColor;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
+    border: 5px solid $goldenColor;
 }
 .wrapper {
     filter: $shadow;
@@ -48,6 +58,36 @@ body {
         transform: scale(1.1);
         letter-spacing: 0.3rem;
         opacity: 0.6;
+    }
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    & .mainText {
+        width: 40vw;
+        margin: auto 25px;
+        color: $textColor;
+        & .heading {
+            @include headingStyle()
+        }
+        & .text {
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 5px 15px 5px;
+        }
+    }
+    & .sideText {
+        width: 40vw;
+        margin: 15px 25px;
+        color: $textColor;
+        & .heading {
+            @include headingStyle()
+        }
+        & .text { 
+            text-align: end;
+            line-height: 1.5rem;
+            margin: 5px 5px 15px 5px;
+        }
     }
 }
     

@@ -1,14 +1,17 @@
+$goldenColor:rgb(150, 101, 27);
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 5px solid $goldenColor;
 }
 .wrapper {
     position: absolute;
     top: 10px;
     right: 60px;
     height: 90px;
-    width: 360px;
+    width: 500px;
     padding: 5px;
     background-color: rgb(199, 223, 247);
     opacity: 0.8;
@@ -18,39 +21,40 @@ body {
     cursor: pointer;
     z-index: 7;
     & .input {
+        display: inline-block;
+        border: 1px solid $goldenColor;
         outline: none;
         text-align: center;
+        margin-left: 0;
         cursor: pointer;
         &:focus::placeholder {
             color: transparent;
             background-color:rgb(177, 211, 245);
-            border: 1px solid rgb(133, 132, 132)
-        }
-       
-    }
-    & select {
-        & option {
-            background-color:rgb(199, 223, 247);
-            border: none;
-            opacity: 0.8;
+            border: 1px solid rgb(133, 132, 132);
+            outline: none;
         }
     }
-    & label {
-        display: inline-block;
-        margin-top: 10px;
-        margin-right: 5px;
-    }
-    
-    & .search {
-        display: block;
-        margin: 10px auto;
-        padding: 4px 6px;
+    & .choseInput {
+        font-size: medium;
+        margin-bottom: 10px;
+        & label {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        & .search {
+            display: block;
+            margin: 10px auto;
+            padding: 4px 6px;
+            border: 1px solid $goldenColor ;
+        }
     }
     & .output {
-        height: 50px;
-        width: 200px;
+        height: 100px;
+        width: 500px;
         background-color:aquamarine;
         position: absolute;
+        top: 120px;
+        right: 8px;
         z-index: 8;
     }
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +12,13 @@
     <input type="text" class="input" id="origin" placeholder="Location">
     <div class="choseInput">Select mode:
       <label for="driving">Driving</label>
-      <input type="radio" value="DRIVING" class="driving" checked>
+      <input type="radio" value="DRIVING" name="radio" class="driving" checked>
       <label for="driving">Bicycling</label>
-      <input type="radio" value="BICYCLING" >
+      <input type="radio" value="BICYCLING"name="radio"  >
       <label for="driving">Transit</label>
-      <input type="radio" value="TRANSIT">
+      <input type="radio" value="TRANSIT" name="radio">
       <label for="driving">Walking</label>
-      <input type="radio" value="WALKING">
+      <input type="radio" value="WALKING"name="radio" >
     </div>
     
 
@@ -39,7 +38,6 @@
     
   
   <script src="../scripts/googleMap.js"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=intMap"></script>  
+  <script async src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyBHs1H6XF6lk9IFTxfoQq4CkzJ5XaFrp98&libraries=places&callback=intMap"></script> 
 </body>
 </html>

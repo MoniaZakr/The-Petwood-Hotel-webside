@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$mainColor:rgb(63, 60, 60);
+$sideColor:darken($mainColor, 5%);
+$textColor:rgb(250, 249, 246);
+$goldenColor:rgb(150, 101, 27);
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:$mainColor;
+    border: 5px solid $goldenColor;
+    color: $textColor;
+    text-align: center;
+}
+.heading {
+    text-align: center;
+    color: $goldenColor;
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.logoButton {
+    display: block;
+    margin: 40px auto;
+    background: none;
+    border: none;
+    &:hover {
+        transform: scale(1.1);
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+address {
+    margin: 50px;
+    & p {
+        margin: 10px;
+        & .contact {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: $goldenColor;
+            &:hover {
+                color:lighten($goldenColor, 20% ); ;
+            }
+        }
+    }
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    margin: 30px auto;
+    & label {
+        width:40%;
+        text-align: end;
+        margin: auto 7px;
+    }
+    & input {
+        width:50%;
+        margin: 5px;
+        padding: 3px;
+        outline: none;
+        border:2px solid $goldenColor ;
+        color: $mainColor;
+    }
+    & select {
+        width: 50%;
+        height: 24.5px;
+        border: 2px solid $goldenColor;
+        margin: 5px;
+        color: $mainColor;
+        & option {
+            color: $mainColor;
+        }
+    }
+    & .submit {
+        width: 20%;
+        letter-spacing: 1px;
+        padding: 1px 5px;
+        margin: 10px 280px;
+        border-color: $goldenColor;
+        background-color: $goldenColor;
+        font-style: italic;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

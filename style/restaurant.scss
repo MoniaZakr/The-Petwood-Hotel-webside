@@ -27,6 +27,7 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
+    border: 5px solid $goldenColor;
 }
 .wrapper {
     filter: $shadow;
@@ -69,7 +70,7 @@ body {
         .text {
             text-align: end;
             line-height: 1.5rem;
-            margin: 5px 5px 15px 5px;
+            margin: 5px 5px 55px 5px;
         }
         .address {
             text-align: center;
@@ -77,6 +78,9 @@ body {
         .contact {
             margin: 15px;
             a {
+
+                display: inline-block;
+                margin-left: 3px;
                 color: $goldenColor;
                 &:hover {
                     color: lighten($goldenColor, 20% );
@@ -92,15 +96,17 @@ body {
         & label {
             width: 40%;
             text-align: end;
+            margin: auto 7px;
         }
         & input {
             width: 40%;
             margin: 5px;
+            padding: 3px;
             outline: none;
-            border: 1px solid $goldenColor;
-            
+            border: 2px solid $goldenColor;
+            color: $mainColor;
         }
-        & .phoneNumber::-webkit-outer-spin-button,.phoneNumber::-webkit-inner-spin-button {
+        & .phoneNumber::-webkit-outer-spin-button,phoneNumber::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
@@ -114,22 +120,26 @@ body {
             margin: 5px 280px;
             border-color: $goldenColor;
             background-color: $goldenColor;
+            font-style: italic;
+            &:hover {
+                transform: scale(1.1);
+            }
         }   
     }
 }
 .saidText {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: large;
-    width: 50vw;
-    margin: 150px auto;
+    width: 60vw;
+    margin: 130px auto;
     align-content: space-between;
     & .text {
         width: 100%;
         letter-spacing: 1.1px;
         color: $textColor;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
     & .pdf {
         display: inline-block;

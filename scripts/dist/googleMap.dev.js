@@ -56,7 +56,7 @@ function calcRoute(directionsDisplay, directionsService) {
       //delete route from map
       directionsDisplay.setDirections({
         routes: []
-      }); //center map in London
+      }); //center map 
 
       map.setCenter(location); //show error message
 
