@@ -87,6 +87,7 @@ body {
   text-align: end;
   line-height: 1.5rem;
   margin: 5px 15px 20px 5px;
+  text-align-last: center;
 }
 
 .container .mainText .text2 {
@@ -139,6 +140,7 @@ body {
   text-align: end;
   line-height: 1.5rem;
   margin: 5px 15px 25px 5px;
+  text-align-last: center;
 }
 
 .container .saidText .text2 {
@@ -164,6 +166,7 @@ body {
   right: 20%;
   height: 40px;
   padding: 3px;
+  text-align: center;
   border: 1px solid #97661c;
   outline: none;
   background-color: #b8b8ba;

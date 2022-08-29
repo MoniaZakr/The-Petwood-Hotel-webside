@@ -223,7 +223,7 @@ figure {
     right: 20%;
     height: 40px;
     padding: 3px;
-    line-height: 40px;
+    line-height: 1.1rem;
     border: 1px solid rgb(151, 102, 28);
     outline: none;
     background-color:rgb(184, 184, 186) ;
@@ -269,7 +269,6 @@ figure {
         margin-bottom: 4px;
         text-align: center;
         @include mg(large) {
-            // font-size: 0.7rem;
             margin: 4px 5px;
         }
         @include mg(medium) {
