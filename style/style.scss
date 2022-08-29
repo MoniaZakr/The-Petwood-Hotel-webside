@@ -269,7 +269,6 @@ figure {
         margin-bottom: 4px;
         text-align: center;
         @include mg(large) {
-            // font-size: 0.7rem;
             margin: 4px 5px;
         }
         @include mg(medium) {
