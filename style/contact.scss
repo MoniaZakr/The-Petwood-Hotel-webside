@@ -104,8 +104,8 @@ body {
             justify-content: center;
             padding: 15px;
             & input[type=number] {
-                -moz-appearance: textfield;
-                width: 120px;
+                -moz-appearance: textfield;;
+                width: 40%;
                 outline: none;
                 border:1px solid $goldenColor;
             }
@@ -114,6 +114,7 @@ body {
                 margin: 0;
             }
             & .submit {
+                width: 20%;
                 border: none;
                 background-color: $goldenColor;
                 letter-spacing: 1px;

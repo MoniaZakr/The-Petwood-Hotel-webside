@@ -119,7 +119,7 @@ body {
 
 .container .asideText .wrapper2 input[type=number] {
   -moz-appearance: textfield;
-  width: 120px;
+  width: 40%;
   outline: none;
   border: 1px solid #96651b;
 }
@@ -130,6 +130,7 @@ body {
 }
 
 .container .asideText .wrapper2 .submit {
+  width: 20%;
   border: none;
   background-color: #96651b;
   letter-spacing: 1px;
