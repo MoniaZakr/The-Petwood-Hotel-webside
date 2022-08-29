@@ -88,6 +88,7 @@ body {
         & .text2 {
             margin-left: 100px;
             text-align: center;
+            list-style-type: none;
             color: lighten($textColor, 80%);
             animation: textclip 3s linear infinite;
             background-image: linear-gradient(
@@ -110,6 +111,9 @@ body {
                     background-position: -200% center;
                 }
             }
+            li {
+                text-decoration: none;
+            }
         }
     }
     & .saidText {
@@ -129,6 +133,7 @@ body {
         & .text2 {
             margin: 0 15px 20px;
             text-align: center;
+            list-style-type: none;
             
         }
         & p:last-child {
@@ -148,8 +153,7 @@ body {
     bottom: -47%;
     right: 20%;
     height: 40px;
-    // width: 100px;
-    padding: 2px;
+    padding: 3px;
     border: 1px solid rgb(151, 102, 28);
     outline: none;
     background-color:rgb(184, 184, 186) ;

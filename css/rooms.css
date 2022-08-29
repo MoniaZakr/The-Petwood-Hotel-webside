@@ -92,6 +92,7 @@ body {
 .container .mainText .text2 {
   margin-left: 100px;
   text-align: center;
+  list-style-type: none;
   color: white;
   -webkit-animation: textclip 3s linear infinite;
           animation: textclip 3s linear infinite;
@@ -118,6 +119,10 @@ body {
   }
 }
 
+.container .mainText .text2 li {
+  text-decoration: none;
+}
+
 .container .saidText {
   width: 40%;
   margin: 15px 20px 30px 20px;
@@ -139,6 +144,7 @@ body {
 .container .saidText .text2 {
   margin: 0 15px 20px;
   text-align: center;
+  list-style-type: none;
 }
 
 .container .saidText p:last-child {
@@ -157,7 +163,7 @@ body {
   bottom: -47%;
   right: 20%;
   height: 40px;
-  padding: 2px;
+  padding: 3px;
   border: 1px solid #97661c;
   outline: none;
   background-color: #b8b8ba;
