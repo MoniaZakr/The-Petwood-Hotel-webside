@@ -23,6 +23,13 @@ body {
   clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
+@media (max-width: 460px) {
+  .wrapper .logo {
+    width: 100vw;
+    clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
 .wrapper .logo .pictures {
   height: 100%;
   width: 100%;
@@ -54,9 +61,21 @@ body {
   justify-content: space-around;
 }
 
+@media (max-width: 460px) {
+  .container {
+    display: block;
+  }
+}
+
 .container .mainText {
   margin: 15px 25px;
   color: #faf9f6;
+}
+
+@media (max-width: 460px) {
+  .container .mainText {
+    margin-bottom: 60px;
+  }
 }
 
 .container .mainText .heading {
@@ -72,6 +91,12 @@ body {
   text-align: end;
   line-height: 1.5rem;
   margin: 5px 5px 15px 5px;
+}
+
+@media (max-width: 460px) {
+  .container .mainText .text1 {
+    text-align-last: center;
+  }
 }
 
 .container .mainText .address {
@@ -105,9 +130,15 @@ body {
 }
 
 .container .asideText .text1 {
-  text-align: end;
+  text-align-last: center;
   line-height: 1.5rem;
   margin: 5px 5px 35px 5px;
+}
+
+@media (max-width: 460px) {
+  .container .asideText .text1 {
+    text-align: center;
+  }
 }
 
 .container .asideText .wrapper2 {
@@ -117,6 +148,11 @@ body {
   padding: 15px;
 }
 
+.container .asideText .wrapper2 input::-webkit-outer-spin-button, .container .asideText .wrapper2 input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .container .asideText .wrapper2 input[type=number] {
   -moz-appearance: textfield;
   width: 40%;
@@ -124,9 +160,10 @@ body {
   border: 1px solid #96651b;
 }
 
-.container .asideText .wrapper2 input::-webkit-outer-spin-button, .container .asideText .wrapper2 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+@media (max-width: 460px) {
+  .container .asideText .wrapper2 input[type=number] {
+    width: 60%;
+  }
 }
 
 .container .asideText .wrapper2 .submit {
