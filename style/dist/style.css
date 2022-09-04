@@ -205,7 +205,7 @@ figure {
 
 .mainText {
   width: 80vw;
-  margin: 80px auto;
+  margin: 70px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -221,6 +221,7 @@ figure {
 @media (max-width: 460px) {
   .mainText {
     display: block;
+    margin: 120px auto;
   }
 }
 
@@ -253,12 +254,14 @@ figure {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
+  height: 40px;
+  width: 120px;
   position: absolute;
   bottom: -25%;
   right: 20%;
-  height: 40px;
   padding: 3px;
   line-height: 40px;
+  text-align: center;
   border: 1px solid #97661c;
   outline: none;
   background-color: #b8b8ba;
@@ -272,12 +275,46 @@ figure {
   transform: scale(1.1);
 }
 
+@media (max-width: 376px) {
+  .booking {
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 460px) {
+  .booking {
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1040px) {
+  .booking {
+    position: absolute;
+    bottom: 25%;
+  }
+}
+
 .footer {
   height: 20vh;
   width: 100%;
   overflow: hidden;
   background-color: #323030;
   filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
+}
+
+@media (max-width: 460px) {
+  .footer {
+    height: 15vh;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -317,7 +354,7 @@ figure {
 
 .footer .footerMessage {
   font-size: 0.8rem;
-  margin-bottom: 4px;
+  margin-bottom: 20%;
   text-align: center;
 }
 
@@ -330,7 +367,7 @@ figure {
 @media (max-width: 800px) {
   .footer .footerMessage {
     font-size: 0.7rem;
-    margin-bottom: 2px;
+    margin-bottom: 15px;
   }
 }
 
@@ -338,10 +375,11 @@ figure {
   .footer .footerMessage {
     font-size: 0.6rem;
     text-align: start;
+    margin-bottom: 20%;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .footer .footerMessage {
     font-size: 0.4rem;
     text-align: start;

@@ -25,6 +25,22 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     text-align: center;
     margin: 5px;
 }
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:800px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
@@ -39,6 +55,11 @@ body {
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(small) {
+            // height: 100vw;
+            width: 100vw;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
         & .pictures {
             height: 100%;
             width: 100%;
@@ -62,9 +83,15 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
+    @include mg(small) {
+        display: block;
+    }
     .mainText {
         margin: 15px 25px;
         color: $textColor;
+        @include mg(small) {
+            margin-bottom:60px;
+        }
         .heading {
             @include headingStyle()
         }
@@ -72,6 +99,9 @@ body {
             text-align: end;
             line-height: 1.5rem;
             margin: 5px 5px 15px 5px;
+            @include mg(small) {
+                text-align-last: center;
+            }
         }
         .address {
             text-align: center;
@@ -84,35 +114,41 @@ body {
                     color: lighten($goldenColor, 20% );
                 }
             }
-            
         }
     }
     .asideText {
         margin: 15px 30px;
         color: $textColor;
         .heading {
-            @include headingStyle()
+            @include headingStyle();
         }
         .text1 {
-            text-align: end;
+            text-align-last: center;
             line-height: 1.5rem;
             margin: 5px 5px 35px 5px;
+            @include mg(small) {
+                text-align:center ;
+            }
         }
         .wrapper2 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 15px;
-            & input[type=number] {
-                -moz-appearance: textfield;;
-                width: 40%;
-                outline: none;
-                border:1px solid $goldenColor;
-            }
             input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
             }
+            input[type=number] {
+                -moz-appearance: textfield;;
+                width: 40%;
+                outline: none;
+                border:1px solid $goldenColor;
+                @include mg(small) {
+                    width: 60%; 
+                }
+            }
+            
             & .submit {
                 width: 20%;
                 border: none;
