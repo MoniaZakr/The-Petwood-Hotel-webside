@@ -27,7 +27,7 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
 }
 $breakpoints:(
     large:(max-width:1040px),
-    medium:(max-width:800px),
+    medium:(max-width:810px),
     x-small:(max-width:580px),
     small:(max-width:460px),
     extra-small:(max-width:376px),
@@ -55,8 +55,12 @@ body {
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(medium) {
+            width: 100vw;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
         @include mg(small) {
-            // height: 100vw;
+            height: 50vh;
             width: 100vw;
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
         }
@@ -83,13 +87,19 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
-    @include mg(small) {
+    @include mg(x-small) {
         display: block;
     }
     .mainText {
         margin: 15px 25px;
         color: $textColor;
+        @include mg(medium) {
+            width: 40vw;
+            margin: 15px;
+        }
         @include mg(small) {
+            width: 80%;
+            // margin: 5px;
             margin-bottom:60px;
         }
         .heading {
@@ -119,6 +129,14 @@ body {
     .asideText {
         margin: 15px 30px;
         color: $textColor;
+        @include mg(medium) {
+            width: 40vw;
+            margin: 15px;
+        }
+        @include mg(small) {
+            width: 80%;
+            // margin: 5px;
+        }
         .heading {
             @include headingStyle();
         }
@@ -127,7 +145,8 @@ body {
             line-height: 1.5rem;
             margin: 5px 5px 35px 5px;
             @include mg(small) {
-                text-align:center ;
+                text-align:center;
+                margin-bottom: 20px;
             }
         }
         .wrapper2 {
@@ -145,7 +164,8 @@ body {
                 outline: none;
                 border:1px solid $goldenColor;
                 @include mg(small) {
-                    width: 60%; 
+                    width: 60%;
+                    margin-bottom: 10px; 
                 }
             }
             
@@ -157,6 +177,10 @@ body {
                 padding: 1px 5px;
                 margin-left: 5px;
                 cursor: pointer;
+                @include mg(small) {
+                    width: 30%;
+                    margin-bottom: 10px;
+                }
                 &:hover {
                     transform: scale(1.1);
                 }
@@ -164,8 +188,26 @@ body {
             & .text1 {
                 margin-top: 30px;
                 line-height: 1.5rem;
+                @include mg(medium) {
+                    text-align: center;
+                }
+                @include mg(small) {
+                    margin-top: 10px;
+                }
                 a {
                     color: $goldenColor;
+                    @include mg(medium) {
+                        font-size: smaller;
+                    }
+                    @include mg(extra-small) {
+                        display: block;
+                        font-size: small;
+                        width: 100%;
+                    }
+                    @include mg(small) {
+                        display: block;
+                        font-size: small;
+                    }
                     &:hover {
                         color:lighten($goldenColor, 20% ); ;
                     }
@@ -191,6 +233,9 @@ body {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 display: inline-block;
+                @include mg(extra-small) {
+                    text-align-last: end;
+                }
                 @keyframes textclip {
                     to {
                         background-position: -200% center;
@@ -199,5 +244,4 @@ body {
             }
         }
     }
-        
 }
