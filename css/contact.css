@@ -26,8 +26,17 @@ body {
           clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
+@media (max-width: 810px) {
+  .wrapper .logo {
+    width: 100vw;
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
 @media (max-width: 460px) {
   .wrapper .logo {
+    height: 50vh;
     width: 100vw;
     -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
@@ -69,7 +78,7 @@ body {
       justify-content: space-around;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .container {
     display: block;
   }
@@ -80,8 +89,16 @@ body {
   color: #faf9f6;
 }
 
+@media (max-width: 810px) {
+  .container .mainText {
+    width: 40vw;
+    margin: 15px;
+  }
+}
+
 @media (max-width: 460px) {
   .container .mainText {
+    width: 80%;
     margin-bottom: 60px;
   }
 }
@@ -128,6 +145,19 @@ body {
   color: #faf9f6;
 }
 
+@media (max-width: 810px) {
+  .container .asideText {
+    width: 40vw;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .asideText {
+    width: 80%;
+  }
+}
+
 .container .asideText .heading {
   display: block;
   font-size: 1.1rem;
@@ -146,6 +176,7 @@ body {
 @media (max-width: 460px) {
   .container .asideText .text1 {
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -176,6 +207,7 @@ body {
 @media (max-width: 460px) {
   .container .asideText .wrapper2 input[type=number] {
     width: 60%;
+    margin-bottom: 10px;
   }
 }
 
@@ -189,6 +221,13 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 460px) {
+  .container .asideText .wrapper2 .submit {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+}
+
 .container .asideText .wrapper2 .submit:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -199,8 +238,41 @@ body {
   line-height: 1.5rem;
 }
 
+@media (max-width: 810px) {
+  .container .asideText .wrapper2 .text1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .asideText .wrapper2 .text1 {
+    margin-top: 10px;
+  }
+}
+
 .container .asideText .wrapper2 .text1 a {
   color: #96651b;
+}
+
+@media (max-width: 810px) {
+  .container .asideText .wrapper2 .text1 a {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .asideText .wrapper2 .text1 a {
+    display: block;
+    font-size: small;
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .asideText .wrapper2 .text1 a {
+    display: block;
+    font-size: small;
+  }
 }
 
 .container .asideText .wrapper2 .text1 a:hover {
@@ -224,6 +296,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+@media (max-width: 376px) {
+  .container .asideText .wrapper2 .text2 {
+    text-align-last: end;
+  }
 }
 
 @-webkit-keyframes textclip {
