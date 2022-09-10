@@ -18,6 +18,23 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     width: 100%;
     object-fit: cover;
 }
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
@@ -27,10 +44,20 @@ body {
     filter: $shadow;
     & .swiper {
         overflow: hidden;
-        background-color: crimson;
         height: 60vh;
         width: 80vw;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(medium) {
+            height: 50vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(small) {
+            height: 50vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        
         & .swiper-slide {
             background-color: blue;
             display: -webkit-box;
@@ -69,10 +96,17 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    @include mg(small) {
+        display: block;
+        margin-top: 25%;
+    }
     & .mainText {
         width: 40%;
         margin: 15px 25px 30px 25px;
         color: $textColor;
+        @include mg(small) {
+            width: 80%;
+        }
         & .heading {
             display: block;
             font-size: 1.1rem;
@@ -108,6 +142,10 @@ body {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+            @include mg(small) {
+                margin-left: 0;
+                text-align: center;
+            }
             @keyframes textclip {
                 to {
                     background-position: -200% center;
@@ -122,6 +160,9 @@ body {
         width: 40%;
         margin: 15px 20px 30px 20px;
         color: $textColor;
+        @include mg(small) {
+            width: 80%;
+        }
         & .sideHeading {
             color: lighten($textColor, 80%);
             margin: 5px;
@@ -144,6 +185,11 @@ body {
             font-style: italic;
             font-weight: lighter; 
             margin-top: 20px;
+            @include mg(small) {
+                font-size: x-small;
+                line-height: 1rem;
+                text-align: justify;
+            }
         }
     }
 }
@@ -153,7 +199,7 @@ body {
     appearance: button;
     text-decoration: none;
     position: absolute;
-    bottom: -47%;
+    top: 100%;
     right: 20%;
     height: 40px;
     padding: 3px;
@@ -165,6 +211,21 @@ body {
     line-height: 40px;
     letter-spacing: 1px;
     box-shadow: 0px 0px 4px 2px rgba(252, 252, 252, 0.5);
+    @include mg(medium) {
+       bottom: -10%;
+    }
+    @include mg(small) {
+        width: 30%;
+        text-align: center;
+        position: absolute;
+        top: 64%;
+        transform: translateX(-50%);
+    }
+    @include mg(extra-small) {
+        width: 30%;
+        top: 66%;
+        transform: translateX(-50%);
+    }
     &:hover {
         transform: scale(1.1);
     }   
