@@ -17,7 +17,6 @@ body {
 }
 
 .wrapper .logo {
-  border-color: blue;
   position: relative;
   height: 60vh;
   width: 80vw;
@@ -28,7 +27,7 @@ body {
 
 @media (max-width: 810px) {
   .wrapper .logo {
-    width: 100vw;
+    width: 100%;
     -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
   }
@@ -37,7 +36,7 @@ body {
 @media (max-width: 460px) {
   .wrapper .logo {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
   }
