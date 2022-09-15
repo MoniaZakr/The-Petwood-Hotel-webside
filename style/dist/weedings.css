@@ -23,6 +23,21 @@ body {
   clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
+@media (max-width: 810px) {
+  .wrapper .logo {
+    width: 100%;
+    clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo {
+    height: 50vh;
+    width: 100%;
+    clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
 .wrapper .logo .pictures {
   height: 100%;
   width: 100%;
@@ -49,35 +64,27 @@ body {
   opacity: 0.6;
 }
 
-.contact {
-  position: absolute;
-  top: 400px;
-  right: 115px;
-  font-size: smaller;
-  color: #faf9f6;
-  text-transform: capitalize;
-}
-
-.contact a {
-  display: inline-block;
-  text-decoration: none;
-  color: #96651b;
-  margin-left: 7px;
-}
-
-.contact a:hover {
-  transform: scale(1.1);
-}
-
 .container {
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 460px) {
+  .container {
+    display: block;
+  }
 }
 
 .container .mainText {
   width: 40vw;
   margin: 15px 25px;
   color: #faf9f6;
+}
+
+@media (max-width: 460px) {
+  .container .mainText {
+    width: 80%;
+  }
 }
 
 .container .mainText .heading {
@@ -101,6 +108,12 @@ body {
   color: #faf9f6;
 }
 
+@media (max-width: 460px) {
+  .container .sideText {
+    width: 80%;
+  }
+}
+
 .container .sideText .text {
   text-align: end;
   line-height: 1.5rem;
@@ -111,6 +124,12 @@ body {
   margin-top: 15px;
   font-weight: lighter;
   font-style: italic;
+}
+
+@media (max-width: 460px) {
+  .container .sideText .text:last-child {
+    margin-bottom: 30px;
+  }
 }
 
 /*# sourceMappingURL=weedings.css.map */
