@@ -5,7 +5,9 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #faf9f6;
   background-color: #3f3c3c;
   border: 5px solid #96651b;
 }
@@ -23,10 +25,18 @@ body {
   clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
+@media (max-width: 1040px) {
+  .wrapper .logo {
+    height: 42vh;
+    width: 100%;
+    clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
 @media (max-width: 810px) {
   .wrapper .logo {
     width: 100%;
-    clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+    clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
   }
 }
 

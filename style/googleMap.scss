@@ -1,6 +1,7 @@
 $goldenColor:rgb(150, 101, 27);
 
 body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,7 +52,6 @@ body {
     & .output {
         height: 100px;
         width: 500px;
-        background-color:aquamarine;
         position: absolute;
         top: 120px;
         right: 8px;

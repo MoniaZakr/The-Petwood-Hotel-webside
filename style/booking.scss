@@ -9,7 +9,25 @@ $sideColor:darken($mainColor, 5%);
 $textColor:rgb(250, 249, 246);
 $goldenColor:rgb(150, 101, 27);
 
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
+
 body {
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:$mainColor;
     border: 5px solid $goldenColor;
@@ -19,7 +37,7 @@ body {
 .heading {
     text-align: center;
     color: $goldenColor;
-    margin: 20px;
+    margin: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -30,67 +48,144 @@ body {
     margin: 40px auto;
     background: none;
     border: none;
+    @include mg(small) {
+        margin-bottom: 10px;
+    }
     &:hover {
         transform: scale(1.1);
         letter-spacing: 0.3rem;
         opacity: 0.6;
     }
 }
-address {
-    margin: 50px;
-    & p {
-        margin: 10px;
-        & .contact {
-            display: inline-block;
-            margin: 5px;
-            text-decoration: none;
-            color: $goldenColor;
-            &:hover {
-                color:lighten($goldenColor, 20% ); ;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    @include mg(medium) {
+        display: block;
+    }
+    & .text {
+        font-weight: bolder;
+        flex-basis: 100%;
+        margin: 50px;
+        @include mg(medium) {
+            letter-spacing: 1px;
+        }
+        @include mg(small) {
+            font-weight: normal;
+        }
+    }
+    & address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
+        @include mg(medium) {
+            width: 90%;
+        }
+        @include mg(small) {
+            width: 100%;
+            margin: 10px;
+        }
+        & p {
+            margin: 25px 0 25px 25px;
+            @include mg(small) {
+                margin: 15px;
+
+            }
+            & .contact {
+                margin: 5px;
+                text-decoration: none;
+                color: $goldenColor;
+                &:hover {
+                    color:lighten($goldenColor, 20% ); ;
+                }
             }
         }
     }
-}
-.form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    height: 50%;
-    justify-content: center;
-    margin: 30px auto;
-    & label {
-        width:40%;
-        text-align: end;
-        margin: auto 7px;
-    }
-    & input {
-        width:50%;
-        margin: 5px;
-        padding: 3px;
-        outline: none;
-        border:2px solid $goldenColor ;
-        color: $mainColor;
-    }
-    & select {
-        width: 50%;
-        height: 24.5px;
-        border: 2px solid $goldenColor;
-        margin: 5px;
-        color: $mainColor;
-        & option {
-            color: $mainColor;
+    & .form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 55%;
+        justify-content: end;
+        margin: 30px 5px;
+        @include mg(small) {
+            width: 90%;
         }
-    }
-    & .submit {
-        width: 20%;
-        letter-spacing: 1px;
-        padding: 1px 5px;
-        margin: 10px 280px;
-        border-color: $goldenColor;
-        background-color: $goldenColor;
-        font-style: italic;
-        &:hover {
-            transform: scale(1.1);
+        @include mg(medium) {
+            width: 90%;
+            height: 500px;
+            justify-content: center;
+            margin: 40px auto;
+        }
+        & label {
+            width:30%;
+            text-align: end;
+            margin: auto 7px;
+            @include mg(small) {
+                width: 25%;
+                text-align: start;
+            }
+            @include mg(medium) {
+                height: 7%;
+                text-align: center;
+                margin: auto 0;
+            }
+        }
+        & input {
+            width:50%;
+            margin: 5px;
+            padding: 3px;
+            outline: none;
+            border:2px solid $goldenColor;
+            color: $mainColor;
+            @include mg(small) {
+                width: 65%;
+                margin: 7px;
+            }
+            @include mg(medium) {
+                height: 7%;
+                font-size: larger;
+            }
+        }
+        & select {
+            width: 50%;
+            height: 24.5px;
+            border: 2px solid $goldenColor;
+            margin: 7px;
+            color: $mainColor;
+            @include mg(medium) {
+                height: 7%;
+            }
+            @include mg(small) {
+                width: 65%;
+            }
+            & option {
+                color: $mainColor;
+            }
+        }
+        & .submit {
+            width: 20%;
+            letter-spacing: 1px;
+            padding: 1px;
+            border-color: $goldenColor;
+            background-color: $goldenColor;
+            font-style: italic;
+            @include mg(medium) {
+                width: 25%;
+                margin-left: 40px;
+            }
+            @include mg(small) {
+                width: 46%;
+                margin-right: 20px;
+                font-size: smaller;
+            }
+            @include mg(extra-small) {
+                width: 50%;
+                margin-right: 9px;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }

@@ -5,7 +5,9 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #faf9f6;
   background-color: #3f3c3c;
   border: 5px solid #96651b;
 }
@@ -21,11 +23,19 @@ body {
   clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
 }
 
+@media (max-width: 1040px) {
+  .wrapper .swiper {
+    height: 42vh;
+    width: 100%;
+    clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
 @media (max-width: 810px) {
   .wrapper .swiper {
     height: 50vh;
     width: 100%;
-    clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+    clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
   }
 }
 
@@ -89,7 +99,6 @@ body {
 .container .mainText {
   width: 40%;
   margin: 15px 25px 30px 25px;
-  color: #faf9f6;
 }
 
 @media (max-width: 460px) {
@@ -151,7 +160,6 @@ body {
 .container .saidText {
   width: 40%;
   margin: 15px 20px 30px 20px;
-  color: #faf9f6;
 }
 
 @media (max-width: 460px) {
@@ -200,7 +208,7 @@ body {
   appearance: button;
   text-decoration: none;
   position: absolute;
-  bottom: -60%;
+  bottom: -48%;
   right: 20%;
   height: 40px;
   padding: 3px;

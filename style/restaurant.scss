@@ -40,9 +40,27 @@ $breakpoints:(
         }
     }
 }
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
 
 body {
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $textColor;
     background-color:$mainColor;
     border: 5px solid $goldenColor;
 }
@@ -54,10 +72,15 @@ body {
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(large) {
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
         @include mg(medium) {
             height: 80%;
             width: 100%;
-            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
         }
         @include mg(small) {
             height: 100%;
@@ -93,7 +116,6 @@ body {
     & .mainText {
         width: 40vw;
         margin: 15px 25px;
-        color: $textColor;
         @include mg(medium) {
             margin: 15px;
         }
@@ -234,7 +256,6 @@ body {
     & .text {
         width: 100%;
         letter-spacing: 1.1px;
-        color: $textColor;
         margin-bottom: 60px;
         @include mg(medium) {
             text-align-last: center;
