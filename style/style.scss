@@ -42,6 +42,7 @@ body {
     height: 100vh;
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $textColor;
     background-color:$mainColor;
     @include mg(medium) {
         height: 100vh;
@@ -93,12 +94,10 @@ body {
                 align-items: flex-end;
                 justify-content: center;
                 z-index: 4;
-                // transition: 2s;
                 @include mg(small) {
                     margin: 0;
                 }
                 & a {
-                    color: $textColor;
                     text-decoration: none;
                     margin-bottom: 40px;
                     font-size: 1,6rem;

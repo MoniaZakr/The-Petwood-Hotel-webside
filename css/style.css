@@ -9,6 +9,7 @@ body {
   height: 100vh;
   min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #faf9f6;
   background-color: #3f3c3c;
 }
 
@@ -116,7 +117,6 @@ body {
 }
 
 .wrapper .logo .navigation li a {
-  color: #faf9f6;
   text-decoration: none;
   margin-bottom: 40px;
   font-size: 1,6rem;

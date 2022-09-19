@@ -6,7 +6,9 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #faf9f6;
   background-color: #3f3c3c;
   border: 5px solid #96651b;
 }
@@ -23,6 +25,33 @@ body {
   margin: 0 auto;
   -webkit-clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
           clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+@media (max-width: 1040px) {
+  .wrapper .logo {
+    height: 42vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 810px) {
+  .wrapper .logo {
+    height: 80%;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper .logo {
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
 }
 
 .wrapper .logo .pictures {
@@ -60,10 +89,28 @@ body {
       justify-content: space-around;
 }
 
+@media (max-width: 460px) {
+  .container {
+    display: block;
+  }
+}
+
 .container .mainText {
   width: 40vw;
   margin: 15px 25px;
-  color: #faf9f6;
+}
+
+@media (max-width: 810px) {
+  .container .mainText {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .mainText {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .container .mainText .heading {
@@ -81,12 +128,36 @@ body {
   margin: 5px 5px 55px 5px;
 }
 
-.container .mainText .address {
-  text-align: center;
+@media (max-width: 460px) {
+  .container .mainText .text {
+    text-align-last: center;
+  }
+}
+
+.container .mainText .text span {
+  display: block;
+}
+
+@media (max-width: 460px) {
+  .container .mainText .text span {
+    display: none;
+  }
 }
 
 .container .mainText .contact {
   margin: 15px;
+}
+
+@media (max-width: 810px) {
+  .container .mainText .contact {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .mainText .contact {
+    font-size: smaller;
+  }
 }
 
 .container .mainText .contact a {
@@ -109,10 +180,47 @@ body {
   margin: 5px;
 }
 
+@media (max-width: 460px) {
+  .container .form {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .form {
+    width: 90%;
+    margin: 55px auto;
+  }
+}
+
 .container .form label {
   width: 40%;
   text-align: end;
   margin: auto 7px;
+}
+
+@media (max-width: 810px) {
+  .container .form label {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .form label {
+    width: 30%;
+    font-size: smaller;
+    margin-right: 0;
+    text-align: start;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .form label {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .container .form input {
@@ -122,6 +230,24 @@ body {
   outline: none;
   border: 2px solid #96651b;
   color: #3f3c3c;
+}
+
+@media (max-width: 810px) {
+  .container .form input {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .form input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .form input {
+    width: 100%;
+  }
 }
 
 .container .form .phoneNumber::-webkit-outer-spin-button, .container .form phoneNumber::-webkit-inner-spin-button {
@@ -143,6 +269,24 @@ body {
   font-style: italic;
 }
 
+@media (max-width: 810px) {
+  .container .form .submit {
+    margin: 5px auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .container .form .submit {
+    margin: 5px 230px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .form .submit {
+    margin: 5px auto;
+  }
+}
+
 .container .form .submit:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -159,16 +303,41 @@ body {
           justify-content: space-between;
   font-size: large;
   width: 60vw;
-  margin: 130px auto;
+  margin: 120px auto;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+}
+
+@media (max-width: 810px) {
+  .saidText {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .saidText {
+    width: 70%;
+    margin: 80px auto;
+    text-align-last: center;
+  }
 }
 
 .saidText .text {
   width: 100%;
   letter-spacing: 1.1px;
-  color: #faf9f6;
   margin-bottom: 60px;
+}
+
+@media (max-width: 810px) {
+  .saidText .text {
+    text-align-last: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .saidText .text {
+    margin-bottom: 40px;
+  }
 }
 
 .saidText .pdf {
@@ -186,6 +355,13 @@ body {
   padding-left: 80px;
   padding-bottom: 45px;
   text-decoration: none;
+}
+
+@media (max-width: 460px) {
+  .saidText .pdf {
+    width: 700px;
+    margin: 35px 0;
+  }
 }
 
 .saidText .pdf:hover {

@@ -1,4 +1,5 @@
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -79,7 +80,6 @@ body {
 .wrapper .output {
   height: 100px;
   width: 500px;
-  background-color: aquamarine;
   position: absolute;
   top: 120px;
   right: 8px;

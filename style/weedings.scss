@@ -25,9 +25,27 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     text-align: center;
     margin: 5px;
 }
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
 
 body {
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $textColor;
     background-color:$mainColor;
     border: 5px solid $goldenColor;
 }
@@ -40,6 +58,20 @@ body {
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(large) {
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(medium) {
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(small) {
+            height: 50vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
         & .pictures {
             height: 100%;
             width: 100%;
@@ -60,30 +92,19 @@ body {
         opacity: 0.6;
     }
 }
-.contact {
-    position: absolute;
-    top: 400px;
-    right: 115px;
-    font-size: smaller;
-    color: $textColor;
-    text-transform: capitalize;
-    & a {
-        display:inline-block;
-        text-decoration: none;
-        color: $goldenColor;
-        margin-left: 7px;
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-}
 .container {
     display: flex;
     justify-content: space-around;
+    @include mg(small) {
+        display: block;
+    }
     & .mainText {
         width: 40vw;
         margin: 15px 25px;
         color: $textColor;
+        @include mg(small) {
+           width: 80%;
+        }
         & .heading {
             @include headingStyle()
         }
@@ -97,6 +118,9 @@ body {
         width: 40vw;
         margin: auto 25px;
         color: $textColor;
+        @include mg(small) {
+            width: 80%;
+         }
         & .text { 
             text-align: end;
             line-height: 1.5rem;
@@ -106,6 +130,9 @@ body {
             margin-top: 15px;
             font-weight: lighter;
             font-style: italic;
+            @include mg(small) {
+                margin-bottom: 30px;
+             }
         }
 
     }

@@ -24,8 +24,43 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     text-align: center;
     margin: 5px;
 }
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
+
 body {
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $textColor;
     background-color:$mainColor;
     border: 5px solid $goldenColor;
 }
@@ -37,6 +72,21 @@ body {
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(large) {
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(medium) {
+            height: 80%;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
+        @include mg(small) {
+            height: 100%;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
         .pictures{
             height: 100%;
             width: 100%;
@@ -60,10 +110,19 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
+    @include mg(small) {
+        display: block;
+    }
     & .mainText {
         width: 40vw;
         margin: 15px 25px;
-        color: $textColor;
+        @include mg(medium) {
+            margin: 15px;
+        }
+        @include mg(small) {
+            width: 80%;
+            text-align: center;
+        }
         .heading {
             @include headingStyle()
         }
@@ -71,14 +130,24 @@ body {
             text-align: end;
             line-height: 1.5rem;
             margin: 5px 5px 55px 5px;
-        }
-        .address {
-            text-align: center;
+            @include mg(small) {
+                text-align-last: center;
+            }
+            & span {
+                display: block;
+                @include mg(small) {
+                display: none;}
+            }
         }
         .contact {
             margin: 15px;
+            @include mg(medium) {
+                margin: 15px 0;
+            }
+            @include mg(extra-small) {
+                font-size: smaller;
+            }
             a {
-
                 display: inline-block;
                 margin-left: 3px;
                 color: $goldenColor;
@@ -93,10 +162,32 @@ body {
         flex-wrap: wrap;
         width: 40vw;
         margin: 5px;
+        @include mg(small) {
+            width: 100%;
+            margin-top: 50px;
+        }
+        @include mg(extra-small) {
+            width: 90%;
+            margin: 55px auto;
+        }
         & label {
             width: 40%;
             text-align: end;
             margin: auto 7px;
+            @include mg(medium) {
+                width: 100%;
+                text-align: center;
+            }
+            @include mg(small) {
+                width: 30%;
+                font-size: smaller;
+                margin-right: 0;
+                text-align: start;
+            }
+            @include mg(extra-small) {
+                width: 100%;
+                text-align: center;
+            }
         }
         & input {
             width: 40%;
@@ -105,6 +196,15 @@ body {
             outline: none;
             border: 2px solid $goldenColor;
             color: $mainColor;
+            @include mg(medium) {
+                width: 50vw;
+            }
+            @include mg(small) {
+                width: 60%;
+            }
+            @include mg(extra-small) {
+                width: 100%;
+            }
         }
         & .phoneNumber::-webkit-outer-spin-button,phoneNumber::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -121,6 +221,15 @@ body {
             border-color: $goldenColor;
             background-color: $goldenColor;
             font-style: italic;
+            @include mg(medium) {
+                margin: 5px auto;
+            }
+            @include mg(small) {
+                margin: 5px 230px;
+            }
+            @include mg(extra-small) {
+                margin: 5px auto;
+            }
             &:hover {
                 transform: scale(1.1);
             }
@@ -133,13 +242,28 @@ body {
     justify-content: space-between;
     font-size: large;
     width: 60vw;
-    margin: 130px auto;
+    margin: 120px auto;
     align-content: space-between;
+    @include mg(medium) {
+        width: 80vw;
+
+    }
+    @include mg(small) {
+        width: 70%;
+        margin: 80px auto;
+        text-align-last: center;
+    }
     & .text {
         width: 100%;
         letter-spacing: 1.1px;
-        color: $textColor;
         margin-bottom: 60px;
+        @include mg(medium) {
+            text-align-last: center;
+        }
+        @include mg(small) {
+            margin-bottom: 40px;
+        }
+
     }
     & .pdf {
         display: inline-block;
@@ -156,6 +280,10 @@ body {
         padding-left: 80px;
         padding-bottom: 45px;
         text-decoration: none;
+        @include mg(small) {
+            width: 700px;
+            margin: 35px 0;
+        }
         &:hover {
             transform: scale(1.1);
         }

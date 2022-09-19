@@ -41,27 +41,34 @@ $breakpoints:(
         }
     }
 }
+
 body {
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $textColor;
     background-color:$mainColor;
     border: 5px solid $goldenColor;
 }
 .wrapper {
     filter: $shadow;
     & .logo {
-        border-color: blue;
         position: relative;
         height: 60vh;
         width: 80vw;
         margin: 0 auto;
         clip-path: polygon(0% 100%, 50% 95%, 100% 100%, 100% 0%, 0% 0%);
+        @include mg(large) {
+            height: 42vh;
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
+        }
         @include mg(medium) {
-            width: 100vw;
-            clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
+            width: 100%;
+            clip-path: polygon(0% 100%, 50% 98%, 100% 100%, 100% 0%, 0% 0%);
         }
         @include mg(small) {
             height: 50vh;
-            width: 100vw;
+            width: 100%;
             clip-path: polygon(0% 100%, 50% 100%, 100% 100%, 100% 0%, 0% 0%);
         }
         & .pictures {
@@ -92,14 +99,12 @@ body {
     }
     .mainText {
         margin: 15px 25px;
-        color: $textColor;
         @include mg(medium) {
             width: 40vw;
             margin: 15px;
         }
         @include mg(small) {
             width: 80%;
-            // margin: 5px;
             margin-bottom:60px;
         }
         .heading {
@@ -128,14 +133,12 @@ body {
     }
     .asideText {
         margin: 15px 30px;
-        color: $textColor;
         @include mg(medium) {
             width: 40vw;
             margin: 15px;
         }
         @include mg(small) {
             width: 80%;
-            // margin: 5px;
         }
         .heading {
             @include headingStyle();
@@ -175,7 +178,7 @@ body {
                 background-color: $goldenColor;
                 letter-spacing: 1px;
                 padding: 1px 5px;
-                margin-left: 5px;
+                margin-left: 8px;
                 cursor: pointer;
                 @include mg(small) {
                     width: 30%;
