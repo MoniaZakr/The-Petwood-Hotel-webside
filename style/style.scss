@@ -97,8 +97,13 @@ body {
                 @include mg(small) {
                     margin: 0;
                 }
+                @include mg(x-small) {
+                    overflow: hidden;
+                    height: 20%;
+                }
                 & a {
                     text-decoration: none;
+                    color: $textColor;
                     margin-bottom: 40px;
                     font-size: 1,6rem;
                     font-weight: bold;
@@ -238,7 +243,7 @@ figure {
         width: 60%;
         text-align: center;
         position: absolute;
-        top: 80%;
+        top: 100%;
         transform: translateX(-50%);
     }
     @include mg(small) {
@@ -288,6 +293,7 @@ figure {
     }
     & .footerMessage {
         font-size: 0.8rem;
+        color: rgb(10, 12, 12);
         margin-bottom: 20%;
         text-align: center;
         @include mg(large) {
