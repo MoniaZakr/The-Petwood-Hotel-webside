@@ -96,7 +96,7 @@ body {
 @media (max-width: 580px) {
   .wrapper .logo .navigation li {
     overflow: hidden;
-    height: 20%;
+    height: 100%;
   }
 }
 

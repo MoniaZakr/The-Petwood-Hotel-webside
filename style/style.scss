@@ -99,7 +99,7 @@ body {
                 }
                 @include mg(x-small) {
                     overflow: hidden;
-                    height: 20%;
+                    height: 100%;
                 }
                 & a {
                     text-decoration: none;
