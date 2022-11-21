@@ -212,6 +212,7 @@ figure {
 }
 
 .mainText {
+  position: relative;
   width: 80vw;
   margin: 70px auto;
   display: flex;
@@ -229,7 +230,7 @@ figure {
 @media (max-width: 460px) {
   .mainText {
     display: block;
-    margin: 120px auto;
+    margin: 70px auto 120px;
   }
 }
 
@@ -257,16 +258,17 @@ figure {
   }
 }
 
-.booking {
+.mainText .booking {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
+  position: absolute;
   height: 40px;
   width: 120px;
-  position: absolute;
-  bottom: -25%;
+  bottom: 30px;
   right: 20%;
+  transform: translateX(50%);
   padding: 3px;
   line-height: 40px;
   text-align: center;
@@ -279,35 +281,24 @@ figure {
   letter-spacing: 1px;
 }
 
-.booking:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 376px) {
-  .booking {
-    width: 60%;
-    text-align: center;
-    position: absolute;
-    top: 100%;
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 460px) {
-  .booking {
-    width: 30%;
-    text-align: center;
-    position: absolute;
-    top: 60%;
-    transform: translateX(-50%);
+  .mainText .booking {
+    left: 10%;
+    top: 110%;
+    transform: translateX(50%);
   }
 }
 
 @media (max-width: 1040px) {
-  .booking {
-    position: absolute;
+  .mainText .booking {
+    right: 25%;
     bottom: 25%;
+    transform: translateX(50%);
   }
+}
+
+.mainText .booking:hover {
+  transform: scale(1.1) translateX(50%);
 }
 
 .footer {
@@ -320,7 +311,6 @@ figure {
 
 @media (max-width: 460px) {
   .footer {
-    height: 15vh;
     overflow: hidden;
   }
 }
@@ -352,7 +342,8 @@ figure {
 
 @media (max-width: 460px) {
   .footer .socialMedia .icons {
-    padding: 20px 45px;
+    font-size: 25px;
+    padding: 15px 30px;
   }
 }
 
@@ -384,7 +375,6 @@ figure {
   .footer .footerMessage {
     font-size: 0.6rem;
     text-align: start;
-    margin-bottom: 20%;
   }
 }
 

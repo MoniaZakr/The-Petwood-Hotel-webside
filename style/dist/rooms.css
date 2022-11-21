@@ -202,14 +202,14 @@ body {
   }
 }
 
-.booking {
+.container .saidText .booking {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
   position: absolute;
-  bottom: -48%;
-  right: 20%;
+  right: 17%;
+  transform: translateX(-50%);
   height: 40px;
   padding: 3px;
   border: 1px solid #97661c;
@@ -223,31 +223,34 @@ body {
 }
 
 @media (max-width: 810px) {
-  .booking {
+  .container .saidText .booking {
     bottom: -10%;
+    right: 25%;
+    transform: translateX(50%);
   }
 }
 
 @media (max-width: 460px) {
-  .booking {
+  .container .saidText .booking {
     width: 30%;
     text-align: center;
-    position: absolute;
-    top: 64%;
-    transform: translateX(-50%);
+    padding: 1px;
+    top: 66%;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
 @media (max-width: 376px) {
-  .booking {
+  .container .saidText .booking {
     width: 30%;
-    top: 66%;
-    transform: translateX(-50%);
+    top: 68%;
+    transform: translateX(50%);
   }
 }
 
-.booking:hover {
-  transform: scale(1.1);
+.container .saidText .booking:hover {
+  transform: scale(1.1) translateX(50%);
 }
 
 /*# sourceMappingURL=rooms.css.map */
