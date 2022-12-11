@@ -86,7 +86,8 @@ body {
             justify-content: space-evenly;
             list-style: none;
             transition: 2s;
-            @include mg(x-small) {
+            overflow: hidden;
+            @include mg(small) {
                 overflow: hidden;
             }
             & li {
@@ -96,10 +97,7 @@ body {
                 z-index: 4;
                 @include mg(small) {
                     margin: 0;
-                }
-                @include mg(x-small) {
                     overflow: hidden;
-                    margin: 0;
                 }
                 & a {
                     text-decoration: none;
@@ -164,7 +162,7 @@ body {
             .img{
                @include backgroundPhotos;
                @include mg(x-small) {
-                   transform: rotate(-90deg)
+                   transform: rotate(-90deg);
                 }
             }
            

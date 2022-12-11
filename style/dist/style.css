@@ -72,9 +72,10 @@ body {
   justify-content: space-evenly;
   list-style: none;
   transition: 2s;
+  overflow: hidden;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 460px) {
   .wrapper .logo .navigation {
     overflow: hidden;
   }
@@ -90,13 +91,7 @@ body {
 @media (max-width: 460px) {
   .wrapper .logo .navigation li {
     margin: 0;
-  }
-}
-
-@media (max-width: 580px) {
-  .wrapper .logo .navigation li {
     overflow: hidden;
-    margin: 0;
   }
 }
 

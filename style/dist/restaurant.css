@@ -112,6 +112,7 @@ body {
 }
 
 .container .mainText .text {
+  width: 30vw;
   text-align: end;
   line-height: 1.5rem;
   margin: 5px 5px 55px 5px;
@@ -234,15 +235,6 @@ body {
   .container .form input {
     width: 100%;
   }
-}
-
-.container .form .phoneNumber::-webkit-outer-spin-button, .container .form phoneNumber::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.container .form .phoneNumber[type=number] {
-  -moz-appearance: textfield;
 }
 
 .container .form .submit {
