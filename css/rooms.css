@@ -223,9 +223,9 @@ body {
   appearance: button;
   text-decoration: none;
   position: absolute;
-  right: 17%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  right: 25%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   height: 40px;
   padding: 3px;
   border: 1px solid #97661c;
@@ -253,7 +253,7 @@ body {
     width: 30%;
     text-align: center;
     padding: 1px;
-    top: 66%;
+    top: 67%;
     right: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
