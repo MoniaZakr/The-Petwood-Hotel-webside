@@ -2,4 +2,4 @@
 .sass-cache/
 *.css.map
 .env
-node_modules
+.node_modules

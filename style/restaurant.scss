@@ -40,6 +40,7 @@ $breakpoints:(
         }
     }
 }
+
 $breakpoints:(
     large:(max-width:1040px),
     medium:(max-width:810px),
@@ -127,6 +128,7 @@ body {
             @include headingStyle()
         }
         .text {
+            width: 30vw;
             text-align: end;
             line-height: 1.5rem;
             margin: 5px 5px 55px 5px;
@@ -206,13 +208,7 @@ body {
                 width: 100%;
             }
         }
-        & .phoneNumber::-webkit-outer-spin-button,phoneNumber::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        & .phoneNumber[type=number] {
-            -moz-appearance: textfield;
-        } 
+        
         & .submit {
             width: 25%;
             letter-spacing: 1px;

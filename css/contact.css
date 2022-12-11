@@ -176,9 +176,10 @@ body {
 }
 
 .container .asideText .text1 {
-  text-align-last: center;
+  width: 35vw;
+  text-align: end;
   line-height: 1.5rem;
-  margin: 5px 5px 35px 5px;
+  margin: 5px auto 35px;
 }
 
 @media (max-width: 460px) {
@@ -200,13 +201,7 @@ body {
   padding: 15px;
 }
 
-.container .asideText .wrapper2 input::-webkit-outer-spin-button, .container .asideText .wrapper2 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .container .asideText .wrapper2 input[type=number] {
-  -moz-appearance: textfield;
   width: 40%;
   outline: none;
   border: 1px solid #96651b;
