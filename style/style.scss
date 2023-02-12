@@ -165,7 +165,6 @@ body {
                    transform: rotate(-90deg);
                 }
             }
-           
             .active{
                 visibility: visible;
                 z-index: 3;
@@ -219,14 +218,13 @@ figure {
         -moz-appearance: button;
         appearance: button;
         text-decoration: none;
-        position: absolute;
         height: 40px;
         width: 120px;
-        bottom: 30px;
+        line-height: 40px;
+        position: absolute;
+        bottom: 5%;
         right: 20%;
         transform: translateX(50%);
-        padding: 3px;
-        line-height: 40px;
         text-align: center;
         border: 1px solid rgb(151, 102, 28);
         outline: none;
@@ -256,17 +254,17 @@ figure {
     overflow: hidden;
     background-color:$sideColor;
     filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
-    @include mg(small) {
-        overflow: hidden;
-    }
-    @include mg(large) {
-        height: 15vh;
-        overflow: hidden;
-    }
-    @include mg(medium) {
-        height: 15vh;
-        overflow-x: hidden;
-    }
+    // @include mg(small) {
+    //     overflow: hidden;
+    // }
+    // @include mg(large) {
+    //     height: 15vh;
+    //     overflow: hidden;
+    // }
+    // @include mg(medium) {
+    //     height: 15vh;
+    //     overflow-x: hidden;
+    // }
     & .socialMedia {
         text-align: center;
         & .icons {
@@ -293,16 +291,16 @@ figure {
         }
         @include mg(medium) {
             font-size: 0.7rem;
-            margin-bottom: 15px;
+            // margin-bottom: 15px;
         }
-        @include mg(small) {
-            font-size: 0.6rem;
-            text-align: start;
-        }
+        // @include mg(small) {
+        //     font-size: 0.6rem;
+        //     text-align: start;
+        // }
         @include mg(extra-small) {
-            font-size: 0.4rem;
-            text-align: start;
-            margin: 0 3px 2px 3px;
+            font-size: 0.6rem;
+            // text-align: start;
+            margin: 0 3px 10px;
         }
     }
 }

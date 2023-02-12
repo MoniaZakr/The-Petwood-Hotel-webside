@@ -293,15 +293,14 @@ figure {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  position: absolute;
   height: 40px;
   width: 120px;
-  bottom: 30px;
+  line-height: 40px;
+  position: absolute;
+  bottom: 5%;
   right: 20%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  padding: 3px;
-  line-height: 40px;
   text-align: center;
   border: 1px solid #97661c;
   outline: none;
@@ -345,26 +344,6 @@ figure {
           filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
 }
 
-@media (max-width: 460px) {
-  .footer {
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 1040px) {
-  .footer {
-    height: 15vh;
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 800px) {
-  .footer {
-    height: 15vh;
-    overflow-x: hidden;
-  }
-}
-
 .footer .socialMedia {
   text-align: center;
 }
@@ -404,22 +383,13 @@ figure {
 @media (max-width: 800px) {
   .footer .footerMessage {
     font-size: 0.7rem;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 460px) {
-  .footer .footerMessage {
-    font-size: 0.6rem;
-    text-align: start;
   }
 }
 
 @media (max-width: 376px) {
   .footer .footerMessage {
-    font-size: 0.4rem;
-    text-align: start;
-    margin: 0 3px 2px 3px;
+    font-size: 0.6rem;
+    margin: 0 3px 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
