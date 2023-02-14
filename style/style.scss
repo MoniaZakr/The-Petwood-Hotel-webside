@@ -14,7 +14,9 @@ $shadow:drop-shadow(0 3px 4px rgba(252, 252, 252, 0.5));
     top: 0;
     left: 0;
     height: 100%;
+    max-height: 100% ;
     width: 100%;
+    max-width: 100%;
     z-index: -7;
     @include mg(small) {
         transform: rotate(-90deg)
@@ -91,12 +93,14 @@ body {
                 overflow: hidden;
             }
             & li {
+                height: 100%;
+                width: 20%;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
                 z-index: 4;
                 @include mg(small) {
-                    margin: 0;
+                    margin: -1px;
                     overflow: hidden;
                 }
                 & a {
@@ -254,17 +258,6 @@ figure {
     overflow: hidden;
     background-color:$sideColor;
     filter: drop-shadow(0 -3px 4px rgba(252, 252, 252, 0.5));
-    // @include mg(small) {
-    //     overflow: hidden;
-    // }
-    // @include mg(large) {
-    //     height: 15vh;
-    //     overflow: hidden;
-    // }
-    // @include mg(medium) {
-    //     height: 15vh;
-    //     overflow-x: hidden;
-    // }
     & .socialMedia {
         text-align: center;
         & .icons {
@@ -291,15 +284,9 @@ figure {
         }
         @include mg(medium) {
             font-size: 0.7rem;
-            // margin-bottom: 15px;
         }
-        // @include mg(small) {
-        //     font-size: 0.6rem;
-        //     text-align: start;
-        // }
         @include mg(extra-small) {
             font-size: 0.6rem;
-            // text-align: start;
             margin: 0 3px 10px;
         }
     }

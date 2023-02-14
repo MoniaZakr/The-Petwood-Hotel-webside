@@ -99,6 +99,8 @@ body {
 }
 
 .wrapper .logo .navigation li {
+  height: 100%;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,7 +115,7 @@ body {
 
 @media (max-width: 460px) {
   .wrapper .logo .navigation li {
-    margin: 0;
+    margin: -1px;
     overflow: hidden;
   }
 }
@@ -202,7 +204,9 @@ body {
   top: 0;
   left: 0;
   height: 100%;
+  max-height: 100%;
   width: 100%;
+  max-width: 100%;
   z-index: -7;
 }
 
