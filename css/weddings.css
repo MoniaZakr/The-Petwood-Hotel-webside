@@ -148,6 +148,7 @@ body {
 
 @media (max-width: 460px) {
   .container .sideText .text:last-child {
+    font-size: smaller;
     margin-bottom: 30px;
   }
 }

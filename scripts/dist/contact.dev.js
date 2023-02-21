@@ -3,8 +3,8 @@
 var pictures = document.querySelector(".pictures");
 var images = document.querySelectorAll(".pictures .hotel");
 var active = 0;
-var submitButton = document.querySelector(".submit");
-var input = document.querySelector(".direction");
+var submitButton = document.querySelector(".submit"); // const input = document.querySelector(".direction");
+
 var changeBaner = setInterval(function () {
   switch (active) {
     case 0:
@@ -47,5 +47,26 @@ var changeBaner = setInterval(function () {
         break;
       }
   }
-}, 2500);
+}, 2500); // function myFunction() {
+//    // Get the value of the input field 
+//    let input = document.querySelector(".direction").value;
+//    // let x = input.value;
+//    // If x is Not a Numbe
+//    if (isNaN(input) || "") {
+//     alert ("pppp");
+//       return false
+//    }
+//    console.log(input);
+// }
+
+function checkPostcode() {
+  var postcode = document.getElementById("postcode").value;
+
+  if (isNaN(postcode) || postcode === "") {
+    alert("Proszę wpisać kod pocztowy");
+  } else {
+    location.href = "http://127.0.0.1:5500/pages/googleMap.html";
+    document.querySelector(".direction").value = "";
+  }
+}
 //# sourceMappingURL=contact.dev.js.map

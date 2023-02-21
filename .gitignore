@@ -13,4 +13,29 @@
 .env.*.local
 dist/
 build/
-*.prod.*
+*.prod.*# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Configuration files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Server runtime data
+pids
+sockets
+
+# Webpack/Babel files
+/webpack
+/public/bundles

@@ -131,6 +131,7 @@ body {
             font-weight: lighter;
             font-style: italic;
             @include mg(small) {
+                font-size: smaller;
                 margin-bottom: 30px;
              }
         }
