@@ -1,7 +1,18 @@
 "use strict";
 
-var button = document.querySelector(".search");
 var input1 = document.getElementById('origin');
+var output = document.querySelector('.output');
+var mode = document.getElementById("mode");
+window.addEventListener("load", function () {
+  this.alert("Please enter the Google maps api key in the HTML file! More information at: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=pl");
+  var selectedMode = document.querySelector('input[type="radio"]:checked');
+  input1.value = "";
+  output.innerHTML = "";
+
+  if (selectedMode) {
+    selectedMode.checked = false;
+  }
+});
 
 function intMap() {
   var location = {
@@ -27,29 +38,28 @@ function intMap() {
   var directionsDisplay = new google.maps.DirectionsRenderer();
   var directionsService = new google.maps.DirectionsService();
   directionsDisplay.setMap(map);
-  calcRoute(directionsDisplay, directionsService);
-  document.getElementById("mode").addEventListener("change", function () {
-    calcRoute(directionsDisplay, directionsService);
+  mode.addEventListener("change", function () {
+    var selectedMode = document.querySelector('input[type="radio"]:checked').value;
+    calcRoute(directionsDisplay, directionsService, map, location, selectedMode);
   });
 }
 
-function calcRoute(directionsDisplay, directionsService) {
+function calcRoute(directionsDisplay, directionsService, map, location, selectedMode) {
   var request = {
     origin: input1.value,
     destination: {
       lat: 53.152360,
       lng: -0.224120
     },
-    travelMode: google.maps.TravelMode[selectMode]
+    travelMode: google.maps.TravelMode[selectedMode]
   };
-  console.log(request.travelMode); //pass the request to the route method
+  console.log(request.origin); //pass the request to the route method
 
   directionsService.route(request, function (result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
       //Get distance and time
-      var _output = document.querySelector('.output');
-
-      _output.innerHTML = "<div class='alert-info'>From: " + document.getElementById("origin").value + ".<br />To: Petwood Hotel" + ".<br /> Distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>"; //display route
+      // const output = document.querySelector('.output');
+      output.innerHTML = "<div class='alert-info'>From: " + document.getElementById("origin").value + ".<br />To: Petwood Hotel" + ".<br /> Distance : " + result.routes[0].legs[0].distance.text + ".<br />Duration : " + result.routes[0].legs[0].duration.text + ".</div>"; //display route
 
       directionsDisplay.setDirections(result);
     } else {

@@ -174,8 +174,9 @@ body {
 
 @media (max-width: 460px) {
   .container .asideText .text1 {
+    width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 5px 10px 20px;
   }
 }
 
@@ -186,20 +187,25 @@ body {
   padding: 15px;
 }
 
-.container .asideText .wrapper2 input[type=number] {
+.container .asideText .wrapper2 form {
+  text-align: center;
+  width: 90%;
+}
+
+@media (max-width: 460px) {}.container .asideText .wrapper2 form input[type=number] {
   width: 40%;
   outline: none;
   border: 1px solid #96651b;
 }
 
 @media (max-width: 460px) {
-  .container .asideText .wrapper2 input[type=number] {
+  .container .asideText .wrapper2 form input[type=number] {
     width: 60%;
     margin-bottom: 10px;
   }
 }
 
-.container .asideText .wrapper2 .submit {
+.container .asideText .wrapper2 form .submit {
   width: 20%;
   border: none;
   background-color: #96651b;
@@ -210,13 +216,13 @@ body {
 }
 
 @media (max-width: 460px) {
-  .container .asideText .wrapper2 .submit {
+  .container .asideText .wrapper2 form .submit {
     width: 30%;
     margin-bottom: 10px;
   }
 }
 
-.container .asideText .wrapper2 .submit:hover {
+.container .asideText .wrapper2 form .submit:hover {
   transform: scale(1.1);
 }
 

@@ -1,5 +1,22 @@
 $goldenColor:rgb(150, 101, 27);
 
+$breakpoints:(
+    large:(max-width:1040px),
+    medium:(max-width:810px),
+    x-small:(max-width:580px),
+    small:(max-width:460px),
+    extra-small:(max-width:376px),
+);
+
+@mixin mg($breakpoint) {
+    $size:map-get($map: $breakpoints, $key:$breakpoint);
+    @if(size) {
+        @media#{$size} {
+            @content;
+        }
+    }
+}
+
 body {
     min-height: 100vh;
     margin: 0;
@@ -11,8 +28,8 @@ body {
     position: absolute;
     top: 10px;
     right: 60px;
-    height: 90px;
-    width: 500px;
+    height: 200px;
+    width: 450px;
     padding: 5px;
     background-color: rgb(199, 223, 247);
     opacity: 0.8;
@@ -21,6 +38,14 @@ body {
     border-radius: 5px;
     cursor: pointer;
     z-index: 7;
+    @include mg(x-small) {
+       top: 6px;
+       left: 50%;
+       transform: translateX(-50%);
+       height: 150px;
+       width: 90%;
+       font-size: 20%;
+    }
     & .input {
         display: inline-block;
         border: 1px solid $goldenColor;
@@ -36,28 +61,29 @@ body {
         }
     }
     & .choseInput {
+        display: flex;
+        justify-content: space-evenly;
         font-size: medium;
-        margin-bottom: 10px;
-        & label {
-            display: inline-block;
-            margin-top: 10px;
-        }
-        & .search {
-            display: block;
-            margin: 10px auto;
-            padding: 4px 6px;
-            border: 1px solid $goldenColor ;
+        font-weight: 800;
+        & .inputContainer {
+            & label {
+                display: inline-block;
+                font-weight: 500;
+            }
         }
     }
-    & .output {
-        height: 100px;
-        width: 500px;
+    & .outputContainer {
+        padding-top: 50px;
         position: absolute;
-        top: 120px;
         right: 8px;
         z-index: 8;
+        @include mg(x-small) {
+           padding-top: 10px;
+            font-size: 0.9rem;
+        }
     }
 }
+
 #map {
     height: 100vh;
 }

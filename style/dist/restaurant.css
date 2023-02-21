@@ -120,6 +120,7 @@ body {
 
 @media (max-width: 460px) {
   .container .mainText .text {
+    width: 100%;
     text-align-last: center;
   }
 }

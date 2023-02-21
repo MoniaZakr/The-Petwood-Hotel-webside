@@ -14,7 +14,7 @@
                 <img class="hotel" src="../photo/hetel 3.jpg" alt="hotel1">
                 <img class="hotel" src="../photo/hotel 6.jpg" alt="hotel2">
                 <img class="hotel" src="../photo/accomm-3 (1).jpg" alt="accomodation">
-                <img class="hotel" src="../photo/wedding.jpg" alt="weedings">
+                <img class="hotel" src="../photo/cake.jpg" alt="weddings">
             </div>
         </header>
     </div>
@@ -33,10 +33,12 @@
         </main>
         <aside class="asideText">
             <i class="heading">Direction</i>
-            <p class="text1">Enter your postcode and click submit to be taken to Google Maps where you will be given details directions to The Golf Hotel. </p>
+            <p class="text1">Enter your postcode and click submit to be taken to Google Maps where you will be given details directions to The Petwood Hotel. </p>
             <div class="wrapper2">
-                <input type="number" class="direction"> 
-                <button type="button" onclick= "location.href='http://127.0.0.1:5500/pages/googleMap.html'" class="submit">Submit</button>
+                <form action="">
+                    <input type="number" class="direction" id="postcode" required> 
+                    <button type="button" onclick= "checkPostcode()" class="submit">Submit</button>
+                </form>
                 <p class="text1">Follow us on Twitter: <a href="http://twitter.com/thepetwoodhotel" class="text1">http://twitter.com/thepetwoodhotel</a></p>
                 <p class="text2">Exclusive offers coming soon!!!</p>
             </div>

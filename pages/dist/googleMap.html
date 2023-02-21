@@ -9,23 +9,34 @@
 </head>
 <body>
   <div class="wrapper">
-    <input type="text" class="input" id="origin" placeholder="Location">
-    <div class="choseInput">Select mode:
-      <label for="driving">Driving</label>
-      <input type="radio" value="DRIVING" name="radio" class="driving" checked>
-      <label for="bicycling">Bicycling</label>
-      <input type="radio" value="BICYCLING"name="radio" class="bicycling"  >
-      <label for="transit">Transit</label>
+    <input type="text" class="input" id="origin" name="origin" placeholder="Location">
+    <div class="choseInput" id="mode">Select mode:
+      <div class="inputContainer">
+        <label for="driving">Driving</label>
+        <input type="radio" value="DRIVING"name="radio" class="driving">
+      </div>
+      <div class="inputContainer">
+        <label for="bicycling">Bicycling</label>
+        <input type="radio" value="BICYCLING"name="radio" class="bicycling">
+      </div>
+      <div class="inputContainer">
+        <label for="transit">Transit</label>
       <input type="radio" value="TRANSIT" name="radio" class="transit">
-      <label for="walking">Walking</label>
+      </div>
+      <div class="inputContainer">
+        <label for="walking">Walking</label>
       <input type="radio" value="WALKING" name="radio" class="walking" >
+      </div>
     </div>
-    <button type="button" class="search" onChange="calcRoute()">Search</button>
-    <div class="output"></div>
+    <div class="outputContainer">
+      <div class="output"></div>
+    </div>
+    
   </div>
-  <div id="map">
+  <div id="map"></div>
 
   <script src="../scripts/googleMap.js"></script>
-  <script async src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyBHs1H6XF6lk9IFTxfoQq4CkzJ5XaFrp98&libraries=places&callback=intMap"></script> 
+
+  <script async src= "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&libraries=places&callback=intMap"></script> 
 </body>
 </html>

@@ -2,7 +2,7 @@ const pictures = document.querySelector(".pictures");
 const images = document.querySelectorAll(".pictures .hotel");
 let active = 0;
 const submitButton = document.querySelector(".submit");
-const input = document.querySelector(".direction");
+// const input = document.querySelector(".direction");
 
 
 let changeBaner = setInterval(() => {
@@ -46,6 +46,27 @@ let changeBaner = setInterval(() => {
       }
 },2500);
 
-   
+// function myFunction() {
+//    // Get the value of the input field 
+//    let input = document.querySelector(".direction").value;
+
+//    // let x = input.value;
+//    // If x is Not a Numbe
+//    if (isNaN(input) || "") {
+//     alert ("pppp");
+//       return false
+    
+//    }
+//    console.log(input);
+// }
+function checkPostcode() {
+   let postcode = document.getElementById("postcode").value;
+   if (isNaN(postcode) || postcode === "") {
+     alert("Proszę wpisać kod pocztowy");
+   } else {
+     location.href = "http://127.0.0.1:5500/pages/googleMap.html";
+     document.querySelector(".direction").value = ""; 
+   }
+}
 
 

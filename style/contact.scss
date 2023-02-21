@@ -149,8 +149,9 @@ body {
             line-height: 1.5rem;
             margin: 5px auto 35px;
             @include mg(small) {
+                width: 100%;
                 text-align:center;
-                margin-bottom: 20px;
+                margin: 5px 10px 20px
             }
         }
         .wrapper2 {
@@ -158,60 +159,67 @@ body {
             flex-wrap: wrap;
             justify-content: center;
             padding: 15px;
-            input[type=number] {
-                width: 40%;
-                outline: none;
-                border:1px solid $goldenColor;
+            & form {
+                text-align: center;
+                width: 90%;
                 @include mg(small) {
-                    width: 60%;
-                    margin-bottom: 10px; 
+                    // background-color: #fff800;
+                    // width: 100%;
                 }
-            }
-            
-            & .submit {
-                width: 20%;
-                border: none;
-                background-color: $goldenColor;
-                letter-spacing: 1px;
-                padding: 1px 5px;
-                margin-left: 8px;
-                cursor: pointer;
-                @include mg(small) {
-                    width: 30%;
-                    margin-bottom: 10px;
-                }
-                &:hover {
-                    transform: scale(1.1);
+                & input[type=number] {
+                    width: 40%;
+                    outline: none;
+                    border:1px solid $goldenColor;
+                    @include mg(small) {
+                        width: 60%;
+                        margin-bottom: 10px;
+                    }
+                }    
+                & .submit {
+                    width: 20%;
+                    border: none;
+                    background-color: $goldenColor;
+                    letter-spacing: 1px;
+                    padding: 1px 5px;
+                    margin-left: 8px;
+                    cursor: pointer;
+                    @include mg(small) {
+                        width: 30%;
+                        margin-bottom: 10px;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
             & .text1 {
-                margin-top: 30px;
-                line-height: 1.5rem;
-                @include mg(medium) {
-                    text-align: center;
-                }
-                @include mg(small) {
-                    margin-top: 10px;
-                }
-                a {
-                    color: $goldenColor;
+                    margin-top: 30px;
+                    line-height: 1.5rem;
                     @include mg(medium) {
-                        font-size: smaller;
-                    }
-                    @include mg(extra-small) {
-                        display: block;
-                        font-size: small;
-                        width: 100%;
+                        text-align: center;
                     }
                     @include mg(small) {
-                        display: block;
-                        font-size: small;
+                        margin-top: 10px;
                     }
-                    &:hover {
-                        color:lighten($goldenColor, 20% ); ;
+                    a {
+                        color: $goldenColor;
+                        @include mg(medium) {
+                            font-size: smaller;
+                        }
+                        @include mg(extra-small) {
+                            display: block;
+                            font-size: small;
+                            width: 100%;
+                        }
+                        @include mg(small) {
+                            display: block;
+                            font-size: small;
+                        }
+                        &:hover {
+                            color:lighten($goldenColor, 20% ); ;
+                        }
                     }
                 }
-            }
             & .text2 {
                 align-self: center;
                 font-size: 2rem;

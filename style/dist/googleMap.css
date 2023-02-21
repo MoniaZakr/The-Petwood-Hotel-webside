@@ -10,8 +10,8 @@ body {
   position: absolute;
   top: 10px;
   right: 60px;
-  height: 90px;
-  width: 500px;
+  height: 200px;
+  width: 450px;
   padding: 5px;
   background-color: #c7dff7;
   opacity: 0.8;
@@ -20,6 +20,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
   z-index: 7;
+}
+
+@media (max-width: 580px) {
+  .wrapper {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    width: 90%;
+    font-size: 20%;
+  }
 }
 
 .wrapper .input {
@@ -39,29 +50,29 @@ body {
 }
 
 .wrapper .choseInput {
+  display: flex;
+  justify-content: space-evenly;
   font-size: medium;
-  margin-bottom: 10px;
+  font-weight: 800;
 }
 
-.wrapper .choseInput label {
+.wrapper .choseInput .inputContainer label {
   display: inline-block;
-  margin-top: 10px;
+  font-weight: 500;
 }
 
-.wrapper .choseInput .search {
-  display: block;
-  margin: 10px auto;
-  padding: 4px 6px;
-  border: 1px solid #96651b;
-}
-
-.wrapper .output {
-  height: 100px;
-  width: 500px;
+.wrapper .outputContainer {
+  padding-top: 50px;
   position: absolute;
-  top: 120px;
   right: 8px;
   z-index: 8;
+}
+
+@media (max-width: 580px) {
+  .wrapper .outputContainer {
+    padding-top: 10px;
+    font-size: 0.9rem;
+  }
 }
 
 #map {
