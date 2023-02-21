@@ -97,6 +97,13 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .wrapper .logo .navigation li {
+    margin: -1px;
+    overflow: hidden;
+  }
+}
+
 .wrapper .logo .navigation li a {
   text-decoration: none;
   color: #faf9f6;

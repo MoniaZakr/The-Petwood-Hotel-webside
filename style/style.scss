@@ -103,6 +103,10 @@ body {
                     margin: -1px;
                     overflow: hidden;
                 }
+                @include mg(medium) {
+                    margin: -1px;
+                    overflow: hidden;
+                }
                 & a {
                     text-decoration: none;
                     color: $textColor;
