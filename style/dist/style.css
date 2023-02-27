@@ -195,12 +195,6 @@ body {
   }
 }
 
-@media (max-width: 580px) {
-  .wrapper .logo .pictures .img {
-    transform: rotate(-90deg);
-  }
-}
-
 .wrapper .logo .pictures .active {
   visibility: visible;
   z-index: 3;
