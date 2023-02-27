@@ -103,6 +103,10 @@ body {
                     margin: -1px;
                     overflow: hidden;
                 }
+                @include mg(medium) {
+                    margin: -1px;
+                    overflow: hidden;
+                }
                 & a {
                     text-decoration: none;
                     color: $textColor;
@@ -165,9 +169,9 @@ body {
             width: 100%;
             .img{
                @include backgroundPhotos;
-               @include mg(x-small) {
-                   transform: rotate(-90deg);
-                }
+            //    @include mg(x-small) {
+            //        transform: rotate(-90deg);
+            //     }
             }
             .active{
                 visibility: visible;
