@@ -113,7 +113,7 @@ body {
   z-index: 4;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 580px) {
   .wrapper .logo .navigation li {
     margin: -1px;
     overflow: hidden;
@@ -122,7 +122,7 @@ body {
 
 @media (max-width: 800px) {
   .wrapper .logo .navigation li {
-    margin: -1px;
+    margin: -4px;
     overflow: hidden;
   }
 }
