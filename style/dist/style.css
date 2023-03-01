@@ -99,7 +99,7 @@ body {
 
 @media (max-width: 800px) {
   .wrapper .logo .navigation li {
-    margin: -4px;
+    margin: -2px;
     overflow: hidden;
   }
 }
