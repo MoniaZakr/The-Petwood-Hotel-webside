@@ -99,12 +99,12 @@ body {
                 align-items: flex-end;
                 justify-content: center;
                 z-index: 4;
-                @include mg(x-small) {
-                    margin: -1px;
-                    overflow: hidden;
-                }
                 @include mg(medium) {
                     margin: -2px;
+                    overflow: hidden;
+                }
+                @include mg(x-small) {
+                    margin: -1px;
                     overflow: hidden;
                 }
                 & a {

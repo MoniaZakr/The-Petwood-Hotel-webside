@@ -90,16 +90,16 @@ body {
   z-index: 4;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 800px) {
   .wrapper .logo .navigation li {
-    margin: -1px;
+    margin: -2px;
     overflow: hidden;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 580px) {
   .wrapper .logo .navigation li {
-    margin: -2px;
+    margin: -1px;
     overflow: hidden;
   }
 }
