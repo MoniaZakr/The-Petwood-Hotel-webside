@@ -6,6 +6,13 @@ window.addEventListener("load", function() {
     motywPowitalny.style.display = "none";
 });
 
+if (window.navigator.userAgent.indexOf("Chrome") > -1) {
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#317EFB");
+} else if (window.navigator.userAgent.indexOf("Firefox") > -1) {
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#317EFB");
+} else if (window.navigator.userAgent.indexOf("MSIE") > -1) {
+  document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", "#317EFB");
+}
 
 
 for (var i = 0; i < navigation.length; i++) {
