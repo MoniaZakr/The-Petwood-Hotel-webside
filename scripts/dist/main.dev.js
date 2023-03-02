@@ -12,6 +12,11 @@ var navigation = _toConsumableArray(document.querySelectorAll(".navigation li"))
 
 var pictures = _toConsumableArray(document.querySelectorAll(".pictures .img"));
 
+window.addEventListener("load", function () {
+  var motywPowitalny = document.getElementById("load");
+  motywPowitalny.style.display = "none";
+});
+
 for (var i = 0; i < navigation.length; i++) {
   navigation[i].addEventListener("mouseover", toggle);
   navigation[i].addEventListener("mouseleave", exit);
