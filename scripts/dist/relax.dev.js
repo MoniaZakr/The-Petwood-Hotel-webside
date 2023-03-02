@@ -2,6 +2,10 @@
 
 var pictures = document.querySelector(".pictures");
 var images = document.querySelectorAll(".pictures .relax");
+window.addEventListener("load", function () {
+  var splashScreen = document.getElementById("load");
+  splashScreen.style.display = "none";
+});
 var active = 0;
 var changeBaner = setInterval(function () {
   switch (active) {

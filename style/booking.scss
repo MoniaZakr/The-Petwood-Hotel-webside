@@ -34,6 +34,17 @@ body {
     color: $textColor;
     text-align: center;
 }
+
+#load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color:$mainColor;
+}
+
 .heading {
     text-align: center;
     color: $goldenColor;

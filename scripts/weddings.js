@@ -1,5 +1,11 @@
 const pictures = document.querySelector(".pictures");
 const images = document.querySelectorAll(".pictures .wedding");
+
+window.addEventListener("load", function() {
+   const splashScreen = document.getElementById("load");
+   splashScreen.style.display = "none";
+});
+
  let active = 0;
 
 
