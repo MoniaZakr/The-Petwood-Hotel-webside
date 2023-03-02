@@ -1,5 +1,10 @@
 const navigation = [...document.querySelectorAll(".navigation li")];
-const pictures = [...document.querySelectorAll(".pictures .img")]
+const pictures = [...document.querySelectorAll(".pictures .img")];
+
+window.addEventListener("load", function() {
+    const motywPowitalny = document.getElementById("load");
+    motywPowitalny.style.display = "none";
+});
 
 
 
