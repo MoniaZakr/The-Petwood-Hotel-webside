@@ -3,6 +3,10 @@ const input1 = document.getElementById('origin');
 const output = document.querySelector('.output');
 const mode = document.getElementById("mode");
 
+window.addEventListener("load", function() {
+    const splashScreen = document.getElementById("load");
+    splashScreen.style.display = "none";
+});
 
 
 window.addEventListener("load", function() {

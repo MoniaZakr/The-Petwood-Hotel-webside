@@ -13,8 +13,8 @@ var navigation = _toConsumableArray(document.querySelectorAll(".navigation li"))
 var pictures = _toConsumableArray(document.querySelectorAll(".pictures .img"));
 
 window.addEventListener("load", function () {
-  var motywPowitalny = document.getElementById("load");
-  motywPowitalny.style.display = "none";
+  var splashScreen = document.getElementById("load");
+  splashScreen.style.display = "none";
 });
 
 if (window.navigator.userAgent.indexOf("Chrome") > -1) {

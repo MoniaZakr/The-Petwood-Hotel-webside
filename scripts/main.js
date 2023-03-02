@@ -2,8 +2,8 @@ const navigation = [...document.querySelectorAll(".navigation li")];
 const pictures = [...document.querySelectorAll(".pictures .img")];
 
 window.addEventListener("load", function() {
-    const motywPowitalny = document.getElementById("load");
-    motywPowitalny.style.display = "none";
+    const splashScreen = document.getElementById("load");
+    splashScreen.style.display = "none";
 });
 
 if (window.navigator.userAgent.indexOf("Chrome") > -1) {

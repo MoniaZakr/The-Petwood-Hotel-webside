@@ -4,6 +4,10 @@ var input1 = document.getElementById('origin');
 var output = document.querySelector('.output');
 var mode = document.getElementById("mode");
 window.addEventListener("load", function () {
+  var splashScreen = document.getElementById("load");
+  splashScreen.style.display = "none";
+});
+window.addEventListener("load", function () {
   this.alert("Please enter the Google maps api key in the HTML file! More information at: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=pl");
   var selectedMode = document.querySelector('input[type="radio"]:checked');
   input1.value = "";

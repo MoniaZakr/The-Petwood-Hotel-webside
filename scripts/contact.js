@@ -2,7 +2,11 @@ const pictures = document.querySelector(".pictures");
 const images = document.querySelectorAll(".pictures .hotel");
 let active = 0;
 const submitButton = document.querySelector(".submit");
-// const input = document.querySelector(".direction");
+
+window.addEventListener("load", function() {
+   const splashScreen = document.getElementById("load");
+   splashScreen.style.display = "none";
+});
 
 
 let changeBaner = setInterval(() => {

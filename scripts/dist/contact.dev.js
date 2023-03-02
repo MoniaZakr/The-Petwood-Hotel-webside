@@ -3,8 +3,11 @@
 var pictures = document.querySelector(".pictures");
 var images = document.querySelectorAll(".pictures .hotel");
 var active = 0;
-var submitButton = document.querySelector(".submit"); // const input = document.querySelector(".direction");
-
+var submitButton = document.querySelector(".submit");
+window.addEventListener("load", function () {
+  var splashScreen = document.getElementById("load");
+  splashScreen.style.display = "none";
+});
 var changeBaner = setInterval(function () {
   switch (active) {
     case 0:
